@@ -1,0 +1,58 @@
+/* Ekrany gier: arena, panel, wyniki i animacje poszczególnych gier. */
+.gamegrid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 18px; align-items: start; }
+@media (max-width: 1000px) { .gamegrid { grid-template-columns: minmax(0, 1fr); } .gamegrid .side { order: 2; } }
+.side { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 78px; }
+@media (max-width: 1000px) { .side { position: static; } }
+.info { font-size: 0.88rem; color: var(--muted); }
+.info table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.info td, .info th { padding: 4px 8px; border-top: 1px solid var(--border); text-align: left; }
+.info th { color: var(--text); font-weight: 700; }
+
+.stage {
+  position: relative; min-height: 380px; border-radius: 22px; overflow: hidden; display: grid; place-items: center; padding: 22px;
+  background:
+    radial-gradient(600px 300px at 50% 0, rgba(139, 92, 246, 0.22), transparent 70%),
+    radial-gradient(500px 300px at 50% 110%, rgba(34, 211, 238, 0.14), transparent 70%),
+    linear-gradient(180deg, #11172c, #0c1122);
+  border: 1px solid var(--border); box-shadow: var(--shadow), inset 0 0 60px rgba(0, 0, 0, 0.35);
+}
+.stage::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: 22px 22px; opacity: 0.6; pointer-events: none; }
+.stage > * { position: relative; }
+.stage.tall { min-height: 460px; }
+
+.result-strip { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-height: 54px; padding: 10px 16px; border-radius: 14px; border: 1px dashed var(--border); color: var(--muted); }
+.result-strip:empty::before { content: 'Wynik pojawi się tutaj'; }
+.result-strip.show { border-style: solid; animation: popIn 0.35s ease both; color: var(--text); }
+.result-strip.win { background: rgba(52, 211, 153, 0.12); border-color: var(--win); }
+.result-strip.lose { background: rgba(251, 113, 133, 0.1); border-color: var(--lose); }
+.result-strip.push { background: rgba(251, 191, 36, 0.1); border-color: var(--gold); }
+.result-strip .amount { margin-left: auto; font-size: 1.25rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.result-strip.win .amount { color: var(--win); } .result-strip.lose .amount { color: var(--lose); }
+
+.history { display: flex; gap: 6px; flex-wrap: wrap; min-height: 28px; }
+.hchip { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; background: var(--surface2); border: 1px solid var(--border); animation: popIn 0.25s ease both; font-variant-numeric: tabular-nums; }
+.hchip.win { color: var(--win); border-color: rgba(52, 211, 153, 0.5); } .hchip.lose { color: var(--lose); border-color: rgba(251, 113, 133, 0.4); } .hchip.gold { color: var(--gold); border-color: rgba(251, 191, 36, 0.5); }
+
+.playbtn { width: 100%; }
+.opts { display: grid; gap: 8px; }
+.opts.cols2 { grid-template-columns: 1fr 1fr; } .opts.cols3 { grid-template-columns: repeat(3, 1fr); }
+.opt {
+  appearance: none; cursor: pointer; padding: 12px 8px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg2); color: var(--text);
+  display: flex; flex-direction: column; align-items: center; gap: 2px; font-weight: 700; transition: all 0.15s;
+}
+.opt .emoji { font-size: 1.6rem; } .opt small { color: var(--muted); font-weight: 600; }
+.opt:hover:not(:disabled) { border-color: var(--accent); transform: translateY(-2px); }
+.opt.on { background: linear-gradient(160deg, rgba(139, 92, 246, 0.35), rgba(34, 211, 238, 0.15)); border-color: var(--accent); box-shadow: 0 0 18px rgba(139, 92, 246, 0.35); }
+.opt:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ---------- moneta ---------- */
+.coin-wrap { perspective: 900px; height: 230px; display: grid; place-items: center; }
+.coin { width: 150px; height: 150px; position: relative; transform-style: preserve-3d; }
+.coin .face {
+  position: absolute; inset: 0; border-radius: 50%; display: grid; place-items: center; font-size: 4.2rem; backface-visibility: hidden;
+  background: radial-gradient(circle at 30% 28%, #fff3b0, #fbbf24 45%, #b45309 100%); border: 6px solid #f59e0b;
+  box-shadow: inset 0 0 22px rgba(120, 53, 15, 0.6), 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 40px rgba(251, 191, 36, 0.35);
+}
+.coin .face.back { transform: rotateY(180deg); }
+.coin-shadow { width: 120px; height: 18px; border-radius: 50%; background: rgba(0, 0, 0, 0.45); filter: blur(6px); margin-top: -10px; }
+.stage-title { font-size: 1.1rem; color: var(--muted); text-align: center; margin-bottom: 8px; min-height: 1.6em; }

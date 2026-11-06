@@ -1,0 +1,24 @@
+# sekrety i dane lokalne (NIGDY do repozytorium)
+.env
+data/
+*.log
+
+# zależności i budowanie
+node_modules/
+**/target/
+
+# gotowe pliki .jar wrzucamy jako Release na GitHubie, nie do gita
+*.jar
+
+# skompresowane nagrania do ręcznego wrzucenia (GitHub/YouTube)
+/klipy-do-githuba/
+
+# lokalne narzędzia edytora i systemu
+.claude/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# stara kopia bota sprzed przebudowy (zastąpiona przez korzeń repozytorium)
+/discord-economy-bot/
