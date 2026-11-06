@@ -7,7 +7,7 @@ Cała ekonomia z bota Discord (portfel, bank, poziomy, sklep ze 113 przedmiotami
 
 ## Instalacja
 
-1. Skopiuj [`dist/KasynoEkonomia-1.0.0.jar`](dist/KasynoEkonomia-1.0.0.jar) do folderu `plugins/` serwera.
+1. Pobierz `KasynoEkonomia-1.0.0.jar` z zakładki Releases na GitHubie (albo zbuduj go komendą `mvn package`, plik pojawi się w `target/`) i skopiuj do folderu `plugins/` serwera.
 2. Uruchom serwer. Przy pierwszym starcie powstanie folder `plugins/KasynoEkonomia/` z `config.yml`, danymi graczy i kopią paczki zasobów (`KasynoUI.zip`).
 3. Wejdź na serwer i wpisz `/kasyno`.
 4. Żeby gracze widzieli własne okna, muszą pobrać paczkę zasobów (patrz niżej). Bez paczki wszystko działa, tylko w zwykłym wyglądzie.
