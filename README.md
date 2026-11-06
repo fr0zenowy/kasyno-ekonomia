@@ -24,7 +24,7 @@ Poza tym są okna gier z własnymi tłami i ikonami (moneta, sloty, ruletka, pli
 | `src/` i `test/` | bot Discord, opis w [`docs/discord-bot.md`](docs/discord-bot.md) |
 | [`docs/`](docs) | dokumentacja, m.in. [architektura](docs/ARCHITEKTURA.md) |
 
-## Co to potrafi
+## Co to jest?
 
 Kasyno i ekonomia: portfel, bank z odsetkami, sklep ze 113 przedmiotami, poziomy, biznesy z dochodem pasywnym, farma, skrzynie i loteria. Gier jest 14 solo w oknach (moneta, sloty, zdrapka, kości, blackjack, hi-lo, miny, Chicken Road, wieża, plinko, limbo, rewolwer, szansa i kamień-papier-nożyce) i cztery stoły na żywo, przy których jedna runda jest wspólna dla wszystkich (crash, ruletka, koło, wyścigi). Do tego jackpot, napad i pojedynki.
 
@@ -51,34 +51,12 @@ Więcej jest w [docs/ARCHITEKTURA.md](docs/ARCHITEKTURA.md), a tutaj najważniej
 * w repo nie ma żadnych sekretów, token bota jest tylko w lokalnym `.env`
 * paczkę zasobów (tła okien, ikony, karty 3D) generują skrypty w Node.js
 
-## Uruchomienie
-
-Plugin: gotowy plik `.jar` jest w zakładce Releases. Wrzuca się go do `plugins/` (Paper 1.21.11, Java 21). Można też zbudować samemu:
-
-```bash
-cd minecraft-plugin
-mvn package
-```
-
-Szczegóły i komendy są w [`minecraft-plugin/README.md`](minecraft-plugin/README.md) i [`sport-plugin/README.md`](sport-plugin/README.md). Plugin ze sportem zastępuje starszy `SiatkowkaPlugin`, więc nie wrzucaj ich razem.
-
-Bot Discord (Node.js 22.13 lub nowszy):
-
-```bash
-npm install
-npm run setup
-npm run deploy
-npm start
-```
-
-`npm run setup` zapyta o token i zapisze go w lokalnym `.env`, który nie trafia do gita. Więcej w [`docs/discord-bot.md`](docs/discord-bot.md).
-
 ## Co jest sprawdzone, a co nie
+
+To nie jest jeszcze skończone. Serwer jest dopiero w testach, a pluginy nie są do końca zrobione.
 
 Nagrania są z działającego serwera: sport, arena, śmietniki, kurier, rekin i okna gier. Napad na bank w świecie, więzienie i waypointy z nagrodami mają na razie tylko testy na atrapie serwera, na żywo jeszcze ich nie widziałem. Nie sprawdzałem też, jak to działa przy dużej liczbie graczy naraz.
 
-## Kto to pisał
+## Autorzy
 
-Kod w większości pisze Claude Code (asystent AI). Ja mówię, co ma działać, sprawdzam to na serwerze i zgłaszam poprawki.
-
-Autor: fr0zenowy
+fr0zenowy & Claude Code
