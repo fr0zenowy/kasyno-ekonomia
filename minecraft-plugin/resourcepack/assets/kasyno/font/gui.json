@@ -1,0 +1,541 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        "\uf808": -8
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_default.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue000"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_menu.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue001"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_kasyno.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue002"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_automaty.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue003"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_karty.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue004"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_ryzyko.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue005"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_live.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue006"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_pokoj.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue007"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_jackpot.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue008"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_napad.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue009"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue00a"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_pojedynek.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue00b"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_loteria.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue00c"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_gracz.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue00d"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_zarobki.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue00e"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_zawod.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue00f"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_trivia.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue010"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_matma.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue011"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_sklep.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue012"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_ekwipunek.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue013"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_bank.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue014"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_biznes.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue015"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_farma.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue016"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_skrzynie.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue017"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_skrzynia.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue018"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_ranking.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue019"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_profil.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue01a"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_pomoc.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue01b"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_moneta.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue01c"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_sloty.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue01d"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_zdrapka.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue01e"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_szansa.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue01f"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_blackjack.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue020"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_hilo.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue021"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_kosci.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue022"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_knp.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue023"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_miny.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue024"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_kurczak.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue025"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_wieza.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue026"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_rewolwer.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue027"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_limbo.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue028"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_plinko.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue029"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_crash.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue02a"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_ruletka.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue02b"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_kolo.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue02c"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_wyscigi.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue02d"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_przestepstwo.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue02e"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_rob.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue02f"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_praca.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue030"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_zebraj.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue031"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_uliczny.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue032"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_ryby.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue033"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_kopalnia.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue034"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_polowanie.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue035"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_las.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue036"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_scena_smietnik.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue037"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_gracz_przelew.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue038"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_gracz_rob.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue039"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "kasyno:font/bg_gracz_pojedynek.png",
+      "ascent": 29,
+      "height": 238,
+      "chars": [
+        "\ue03a"
+      ]
+    }
+  ]
+}

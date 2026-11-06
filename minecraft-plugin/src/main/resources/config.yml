@@ -1,0 +1,142 @@
+# Kasyno i Ekonomia: ustawienia pluginu.
+#
+# Czy rejestrować krótkie komendy po polsku (/saldo, /sklep, /moneta, /daily ...). Jeśli inny plugin ma komendę
+# o tej samej nazwie, zadziała tylko wersja z prefiksem, np. /kasyno:saldo, a /kasyno otwiera menu zawsze.
+short-commands: true
+
+# Czy informować wszystkich na czacie o dużych wygranych (od tylu monet).
+big-win-broadcast:
+  enabled: true
+  min-net: 100000
+
+# Stoły na żywo (crash, ruletka, koło, wyścigi): czy pierwszy zakład rozsyła wszystkim zaproszenie z przyciskiem [DOŁĄCZ].
+tables:
+  announce: true
+
+# NPC: domyślny kolor nazwy (MiniMessage).
+npc:
+  name-color: "<gold>"
+
+# Waypointy jak w modach: napis z nazwą (w kolorze punktu) i odległością („76 metrów”) o stałym rozmiarze, widoczny przez ściany.
+# Tworzysz je komendą /kasyno waypoint dodaj <nazwa> [kolor], a każdy gracz widzi je u siebie z dowolnej odległości.
+waypoints:
+  # false = waypointy znikają i nikt ich nie widzi (zapisane zostają w waypoints.yml).
+  enabled: true
+  # Napis z nazwą i odległością.
+  label: true
+  # Stały rozmiar napisu (1 = litery po ok. 0,2 bloku wysokości) widziany z odległości label-distance. 0,5-12. Mniej = mniejszy napis.
+  label-scale: 2.2
+  # Napis stoi w kierunku waypointu na tej odległości od gracza (bliżej, jeśli waypoint jest bliżej), dzięki czemu na ekranie
+  # ma zawsze ten sam rozmiar, niezależnie od tego, jak daleko jest waypoint. 4-40.
+  label-distance: 12
+  # Opcjonalna pionowa świecąca kreska w kolorze punktu (domyślnie wyłączona).
+  beam: false
+  # Wysokość kreski w blokach (16-512).
+  beam-height: 256
+  # Do tylu bloków kreska stoi w prawdziwym miejscu waypointu, dalej „przykleja się” w jego kierunku. 24-200.
+  marker-distance: 80
+  # Ile najbliższych waypointów widzi naraz jeden gracz (1-32).
+  max-visible: 8
+  # Dalej niż tyle bloków waypoint się nie pokazuje (0 = bez limitu).
+  max-distance: 0
+  # Kolor, gdy przy tworzeniu nie podasz własnego (nazwa po polsku albo #rrggbb).
+  default-color: "ffd700"
+  # Miejsca samego kasyna (bank, arena, więzienie) pojawiają się jako waypointy automatycznie, o ile je ustawiłeś.
+  auto-places: true
+  # Waypoint z nagrodą (/kasyno waypoint nagroda <nazwa> <kwota>) odkrywa się raz na gracza, podchodząc na tyle bloków.
+  discover-radius: 8
+  # Prowadzenie (/kasyno waypoint prowadz <nazwa>) kończy się, gdy gracz podejdzie na tyle bloków.
+  arrive-radius: 6
+  # Po śmierci gracz widzi swoje „Miejsce śmierci” tyle minut (0 = nie zaznaczaj).
+  death-minutes: 10
+
+# Więzienie: kto wpadnie (nieudane /przestepstwo, nieudane okradanie gracza, złapany w napadzie na bank), trafia do losowej celi
+# i wychodzi, wykonując zadania (minigierki: /kasyno wiezienie) albo po upływie czasu.
+prison:
+  enabled: true
+  # Świat z celami (puste = główny świat serwera).
+  world: ""
+  # Cele jako współrzędne bloku „x y z” (gracz staje na jego środku). Trafiasz do jednej z nich losowo.
+  # Trzecia cela miała być pod „92 65” bez X, więc jest tu -85 92 65 (kolejne 3 bloki dalej). Popraw w razie potrzeby
+  # albo komendą /kasyno wiezienie cela <nr> ustaw (stajesz w środku celi).
+  cells:
+    - "-79 92 65"
+    - "-82 92 65"
+    - "-85 92 65"
+  # Dokąd trafia wypuszczony. Puste = punkt spawnu świata. Ustawisz komendą /kasyno wiezienie wyjscie ustaw.
+  exit: ""
+  # Jak daleko od środka celi więzień może odejść (w blokach), zanim strażnik zawróci go do celi.
+  radius: 3.5
+  # Ile ticków (20 = 1 s) gracz widzi wynik swojej wpadki, zanim trafi do celi.
+  arrest-delay-ticks: 80
+  # Za co ile zadań i ile minut maksymalnie (po tym czasie wychodzi sam).
+  sentences:
+    przestepstwo:
+      tasks: 3
+      minutes: 8
+    okradanie:
+      tasks: 2
+      minutes: 5
+    napad:
+      tasks: 4
+      minutes: 12
+  # Komendy dozwolone w celi (poza nimi wszystko jest zablokowane; kto ma uprawnienie kasyno.prison.bypass, nie siedzi wcale).
+  allowed-commands:
+    - kasyno wiezienie
+    - k wiezienie
+    - casino wiezienie
+    - wiezienie
+    - cela
+    - msg
+    - tell
+    - w
+    - r
+    - reply
+    - help
+    - list
+
+# Rekin: im dalej od lądu pływasz po głębokiej wodzie, tym większa szansa, że podpłynie. Najpierw widać płetwę (kilka sekund na wyjście
+# z wody albo wsiadanie do łodzi), potem rekin rzuca się na gracza, pożera go i gracz ginie, tracąc część gotówki z portfela (bank jest bezpieczny).
+shark:
+  enabled: true
+  # Do tylu bloków od ostatniego lądu, na którym stałeś, rekin nie przypłynie.
+  min-distance: 20
+  # Od tylu bloków szansa na pojedyncze losowanie jest największa (rośnie liniowo od min-distance do tej wartości).
+  max-distance: 150
+  # Szansa na atak przy jednym losowaniu w max-distance albo dalej (0-1). 0,2 = średnio co piąte losowanie.
+  max-chance: 0.2
+  # Co ile sekund pływania następuje losowanie.
+  check-seconds: 4
+  # Ile bloków wody musi być pod pływakiem (płytkie wody są bezpieczne).
+  min-depth: 3
+  # Ile sekund mija od pojawienia się płetwy do ataku (czas na ucieczkę).
+  warning-seconds: 5
+  # Po ataku albo ucieczce tyle sekund rekin daje spokój temu graczowi.
+  cooldown-seconds: 120
+  # Jaką część gotówki z portfela zabiera rekin (0,5 = połowę).
+  loss-fraction: 0.5
+
+# Własny wygląd okien (tła i ikony) z paczki zasobów dołączonej do pluginu.
+# auto = gracze, których paczkę serwer widzi jako załadowaną, mają nowe okna, reszta zwykłe
+#        (kto wgrał paczkę ręcznie, włącza je sobie komendą /kasyno pack on).
+# on   = nowe okna dla wszystkich (np. gdy paczka idzie z server.properties albo wszyscy mają ją wgraną).
+# off  = zwykłe okna dla wszystkich.
+custom-gui: auto
+
+resource-pack:
+  # Czy wysyłać graczom paczkę przy wejściu na serwer.
+  enabled: true
+  # Gdzie gracz pobiera paczkę. Puste = plugin sam ją udostępnia (host.* poniżej).
+  # Albo wklej bezpośredni link do pliku KasynoUI.zip (kopia leży w plugins/KasynoEkonomia/KasynoUI.zip).
+  url: ""
+  # Suma SHA-1 pliku pod własnym linkiem (puste = suma dołączonej paczki).
+  sha1: ""
+  # Czy gracz musi przyjąć paczkę (kto odmówi, zostanie wyrzucony). Zostaw false: bez paczki okna są po prostu zwykłe.
+  required: false
+  prompt: "Paczka kasyna: własne okna i ikony."
+  host:
+    # Wbudowany serwer HTTP, który podaje paczkę graczom. Port TCP musi być otwarty na zewnątrz.
+    enabled: true
+    port: 8123
+    # Publiczny adres serwera (IP albo domena), pod którym łączą się gracze. Puste = adres z server.properties albo 127.0.0.1.
+    address: ""

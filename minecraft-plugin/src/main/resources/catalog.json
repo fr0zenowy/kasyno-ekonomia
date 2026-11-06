@@ -1,0 +1,3563 @@
+{
+ "games": {
+  "kolo": [
+   {
+    "label": "x0",
+    "mult": 0,
+    "w": 38.3
+   },
+   {
+    "label": "x0.5",
+    "mult": 0.5,
+    "w": 20
+   },
+   {
+    "label": "x1",
+    "mult": 1,
+    "w": 17
+   },
+   {
+    "label": "x1.5",
+    "mult": 1.5,
+    "w": 12
+   },
+   {
+    "label": "x2",
+    "mult": 2,
+    "w": 8
+   },
+   {
+    "label": "x3",
+    "mult": 3,
+    "w": 3.5
+   },
+   {
+    "label": "x5",
+    "mult": 5,
+    "w": 1.2
+   },
+   {
+    "label": "x10",
+    "mult": 10,
+    "w": 0.4
+   },
+   {
+    "label": "x50",
+    "mult": 50,
+    "w": 0.1
+   },
+   {
+    "label": "x200",
+    "mult": 200,
+    "w": 0.05
+   }
+  ],
+  "zdrapka": [
+   {
+    "mult": 0,
+    "w": 69.1,
+    "sym": null
+   },
+   {
+    "mult": 1,
+    "w": 15,
+    "sym": "🍒"
+   },
+   {
+    "mult": 2,
+    "w": 10.5,
+    "sym": "🍋"
+   },
+   {
+    "mult": 3,
+    "w": 5.2,
+    "sym": "🍀"
+   },
+   {
+    "mult": 5,
+    "w": 2.4,
+    "sym": "⭐"
+   },
+   {
+    "mult": 10,
+    "w": 1,
+    "sym": "💎"
+   },
+   {
+    "mult": 25,
+    "w": 0.25,
+    "sym": "👑"
+   },
+   {
+    "mult": 100,
+    "w": 0.08,
+    "sym": "🏆"
+   },
+   {
+    "mult": 500,
+    "w": 0.02,
+    "sym": "🎰"
+   }
+  ],
+  "wyscigi": [
+   {
+    "name": "Błyskawica",
+    "p": 0.35,
+    "mult": 2.7
+   },
+   {
+    "name": "Pegaz",
+    "p": 0.25,
+    "mult": 3.8
+   },
+   {
+    "name": "Burza",
+    "p": 0.2,
+    "mult": 4.7
+   },
+   {
+    "name": "Mustang",
+    "p": 0.12,
+    "mult": 7.9
+   },
+   {
+    "name": "Czarny Koń",
+    "p": 0.08,
+    "mult": 11.8
+   }
+  ],
+  "plinko": {
+   "rows": 12,
+   "mults": {
+    "niskie": [
+     8.3,
+     5,
+     3.1,
+     1.9,
+     1.1,
+     0.7,
+     0.4,
+     0.7,
+     1.1,
+     1.9,
+     3.1,
+     5,
+     8.3
+    ],
+    "srednie": [
+     30,
+     13,
+     5.4,
+     2.3,
+     1,
+     0.4,
+     0.2,
+     0.4,
+     1,
+     2.3,
+     5.4,
+     13,
+     30
+    ],
+    "wysokie": [
+     170,
+     30,
+     7.5,
+     2.1,
+     0.5,
+     0.2,
+     0.1,
+     0.2,
+     0.5,
+     2.1,
+     7.5,
+     30,
+     170
+    ],
+    "szalone": [
+     1000,
+     12,
+     4,
+     1.4,
+     0.3,
+     0.1,
+     0,
+     0.1,
+     0.3,
+     1.4,
+     4,
+     12,
+     1000
+    ]
+   }
+  },
+  "sloty": {
+   "symbols": [
+    {
+     "e": "🍒",
+     "w": 30,
+     "triple": 3,
+     "pair": 1
+    },
+    {
+     "e": "🍋",
+     "w": 25,
+     "triple": 6,
+     "pair": 1
+    },
+    {
+     "e": "🍇",
+     "w": 20,
+     "triple": 10,
+     "pair": 1
+    },
+    {
+     "e": "🔔",
+     "w": 12,
+     "triple": 20,
+     "pair": 1
+    },
+    {
+     "e": "💎",
+     "w": 8,
+     "triple": 50,
+     "pair": 1
+    },
+    {
+     "e": "7️⃣",
+     "w": 5,
+     "triple": 100,
+     "pair": 1
+    }
+   ],
+   "jackpot": {
+    "chance": 0.0006666666666666666,
+    "mult": 200
+   }
+  },
+  "kurczak": {
+   "latwy": {
+    "name": "Łatwy",
+    "d": 0.06,
+    "max": 30
+   },
+   "sredni": {
+    "name": "Średni",
+    "d": 0.14,
+    "max": 26
+   },
+   "trudny": {
+    "name": "Trudny",
+    "d": 0.25,
+    "max": 22
+   },
+   "hardcore": {
+    "name": "Hardcore",
+    "d": 0.4,
+    "max": 14
+   }
+  },
+  "wieza": {
+   "latwy": {
+    "name": "Łatwy",
+    "cols": 4,
+    "bad": 1
+   },
+   "sredni": {
+    "name": "Średni",
+    "cols": 3,
+    "bad": 1
+   },
+   "trudny": {
+    "name": "Trudny",
+    "cols": 2,
+    "bad": 1
+   },
+   "ekstremalny": {
+    "name": "Ekstremalny",
+    "cols": 3,
+    "bad": 2
+   }
+  }
+ },
+ "items": [
+  {
+   "id": "wedka",
+   "name": "Wędka",
+   "type": "tool",
+   "price": 500,
+   "sell": 0,
+   "desc": "Pozwala łowić ryby (/ryby).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "super_wedka",
+   "name": "Super wędka",
+   "type": "tool",
+   "price": 5000,
+   "sell": 0,
+   "desc": "Lepsza wędka – dwa razy większa szansa na rzadkie ryby.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "wedka_mistrza",
+   "name": "Wędka mistrza",
+   "type": "tool",
+   "price": 40000,
+   "sell": 0,
+   "desc": "3,5× większa szansa na rzadkie ryby.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "wedka_legendarna",
+   "name": "Wędka legendarna",
+   "type": "tool",
+   "price": 400000,
+   "sell": 0,
+   "desc": "6× większa szansa na rzadkie ryby. Rekiny same się garną.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "kilof",
+   "name": "Kilof",
+   "type": "tool",
+   "price": 800,
+   "sell": 0,
+   "desc": "Pozwala kopać w kopalni (/kopalnia).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zloty_kilof",
+   "name": "Złoty kilof",
+   "type": "tool",
+   "price": 8000,
+   "sell": 0,
+   "desc": "Dwa razy większa szansa na cenne rudy.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "diamentowy_kilof",
+   "name": "Diamentowy kilof",
+   "type": "tool",
+   "price": 60000,
+   "sell": 0,
+   "desc": "3,5× większa szansa na cenne rudy.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "kilof_kosmiczny",
+   "name": "Kilof kosmiczny",
+   "type": "tool",
+   "price": 600000,
+   "sell": 0,
+   "desc": "6× większa szansa na cenne rudy i meteoryty.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "strzelba",
+   "name": "Strzelba",
+   "type": "tool",
+   "price": 1500,
+   "sell": 0,
+   "desc": "Pozwala polować (/polowanie).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "karabin",
+   "name": "Karabin snajperski",
+   "type": "tool",
+   "price": 9000,
+   "sell": 0,
+   "desc": "Rzadziej pudłujesz (12%) i częściej trafiasz grubą zwierzynę.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "luneta",
+   "name": "Karabin z lunetą",
+   "type": "tool",
+   "price": 70000,
+   "sell": 0,
+   "desc": "Pudłujesz tylko w 6% strzałów, 3,5× szansa na grubą zwierzynę.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "snajperka",
+   "name": "Snajperka elitarna",
+   "type": "tool",
+   "price": 700000,
+   "sell": 0,
+   "desc": "Pudłujesz w 3% strzałów, 6× szansa na grubą zwierzynę.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "koszyk",
+   "name": "Koszyk grzybiarza",
+   "type": "tool",
+   "price": 3000,
+   "sell": 0,
+   "desc": "1,5× lepszy zbiór w lesie (/las).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "wielki_koszyk",
+   "name": "Wielki koszyk",
+   "type": "tool",
+   "price": 30000,
+   "sell": 0,
+   "desc": "3× lepszy zbiór w lesie (/las).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "gitara",
+   "name": "Gitara",
+   "type": "tool",
+   "price": 5000,
+   "sell": 0,
+   "desc": "Grajek uliczny (/uliczny) zarabia o 50% więcej.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzypce",
+   "name": "Skrzypce",
+   "type": "tool",
+   "price": 50000,
+   "sell": 0,
+   "desc": "Grajek uliczny zarabia 2,2× więcej.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "fortepian",
+   "name": "Fortepian",
+   "type": "tool",
+   "price": 500000,
+   "sell": 0,
+   "desc": "Grajek uliczny zarabia 4× więcej. Ktoś musi go jeszcze dowieźć.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "klodka",
+   "name": "Kłódka",
+   "type": "passive",
+   "price": 700,
+   "sell": 0,
+   "desc": "Chroni portfel przed jednym okradzeniem, potem się zużywa.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "maska",
+   "name": "Kominiarka",
+   "type": "passive",
+   "price": 600,
+   "sell": 0,
+   "desc": "+20% szansy w /przestepstwo i /okradnij. Zużywa się przy użyciu.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "alarm",
+   "name": "Alarm",
+   "type": "passive",
+   "price": 15000,
+   "sell": 0,
+   "desc": "Złodziej, który na Tobie wpadnie, płaci podwójną grzywnę.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "lom",
+   "name": "Łom",
+   "type": "consumable",
+   "price": 3000,
+   "sell": 0,
+   "desc": "Przy /okradnij łamie kłódkę ofiary (jednorazowo) i skok trwa dalej.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "laptop",
+   "name": "Laptop",
+   "type": "passive",
+   "price": 3000,
+   "sell": 0,
+   "desc": "+25% zarobków z /praca na stałe.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "garnitur",
+   "name": "Garnitur",
+   "type": "passive",
+   "price": 8000,
+   "sell": 0,
+   "desc": "+15% zarobków z /praca (sumuje się z laptopem).",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "samochod",
+   "name": "Samochód",
+   "type": "passive",
+   "price": 60000,
+   "sell": 0,
+   "desc": "+25% zarobków z /praca (dojeżdżasz szybciej).",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "pas_narzedziowy",
+   "name": "Pas narzędziowy",
+   "type": "passive",
+   "price": 30000,
+   "sell": 0,
+   "desc": "Narzędzia psują się 5× rzadziej (1% zamiast 5% na użycie).",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "talizman",
+   "name": "Talizman szczęścia",
+   "type": "passive",
+   "price": 75000,
+   "sell": 0,
+   "desc": "Na stałe +25% szans na rzadkie łupy.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "sejf",
+   "name": "Mały sejf",
+   "type": "passive",
+   "price": 12000,
+   "sell": 0,
+   "desc": "+25 000 limitu banku (kumuluje się). Wypada tylko ze skrzyń; duże ulepszenia kupisz w /bank.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "pies",
+   "name": "Pies obronny",
+   "type": "passive",
+   "price": 25000,
+   "sell": 0,
+   "desc": "Złodziejom trudniej Cię okraść (−15 pkt szansy).",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "kot",
+   "name": "Kot",
+   "type": "passive",
+   "price": 20000,
+   "sell": 0,
+   "desc": "+10% szans na rzadkie łupy. Przynosi myszy i szczęście.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "papuga",
+   "name": "Papuga",
+   "type": "passive",
+   "price": 40000,
+   "sell": 0,
+   "desc": "+5% zarobków. Powtarza „kasa, kasa”.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "sowa",
+   "name": "Sowa",
+   "type": "passive",
+   "price": 30000,
+   "sell": 0,
+   "desc": "+10% XP. Mądra bestia.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "jednorozec",
+   "name": "Jednorożec",
+   "type": "passive",
+   "price": 1000000,
+   "sell": 0,
+   "desc": "+30% szans na rzadkie łupy i +10% XP.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "smok",
+   "name": "Smok",
+   "type": "passive",
+   "price": 5000000,
+   "sell": 0,
+   "desc": "+15% zarobków, +15% XP i +10% szans na rzadkie łupy.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "vip_brazowy",
+   "name": "Karta VIP: brąz",
+   "type": "passive",
+   "price": 100000,
+   "sell": 0,
+   "desc": "Na stałe +10% zarobków z pracy, żebrania, quizów i przestępstw.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "vip_srebrny",
+   "name": "Karta VIP: srebro",
+   "type": "passive",
+   "price": 500000,
+   "sell": 0,
+   "desc": "Na stałe +25% zarobków (zamiast brązu). Wymaga karty brązowej.",
+   "unique": true,
+   "requires": "vip_brazowy"
+  },
+  {
+   "id": "vip_zloty",
+   "name": "Karta VIP: złoto",
+   "type": "passive",
+   "price": 2500000,
+   "sell": 0,
+   "desc": "Na stałe +50% zarobków (zamiast srebra). Wymaga karty srebrnej.",
+   "unique": true,
+   "requires": "vip_srebrny"
+  },
+  {
+   "id": "vip_platynowa",
+   "name": "Karta VIP: platyna",
+   "type": "passive",
+   "price": 25000000,
+   "sell": 0,
+   "desc": "Na stałe +100% zarobków (podwajasz!). Wymaga karty złotej.",
+   "unique": true,
+   "requires": "vip_zloty"
+  },
+  {
+   "id": "vip_diamentowa",
+   "name": "Karta VIP: diament",
+   "type": "passive",
+   "price": 250000000,
+   "sell": 0,
+   "desc": "Na stałe +200% zarobków (×3 w sumie). Wymaga karty platynowej.",
+   "unique": true,
+   "requires": "vip_platynowa"
+  },
+  {
+   "id": "dyplom",
+   "name": "Dyplom",
+   "type": "passive",
+   "price": 50000,
+   "sell": 0,
+   "desc": "Na stałe +25% XP ze wszystkiego.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "doktorat",
+   "name": "Doktorat",
+   "type": "passive",
+   "price": 500000,
+   "sell": 0,
+   "desc": "Na stałe dodatkowe +50% XP. Wymaga dyplomu.",
+   "unique": true,
+   "requires": "dyplom"
+  },
+  {
+   "id": "konto_oszczednosciowe",
+   "name": "Konto oszczędnościowe",
+   "type": "passive",
+   "price": 250000,
+   "sell": 0,
+   "desc": "Odsetki w /daily 4% zamiast 2% (limit 50 000).",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "konto_premium",
+   "name": "Konto premium",
+   "type": "passive",
+   "price": 2000000,
+   "sell": 0,
+   "desc": "Odsetki w /daily 6% (limit 150 000). Wymaga konta oszczędnościowego.",
+   "unique": true,
+   "requires": "konto_oszczednosciowe"
+  },
+  {
+   "id": "menedzer",
+   "name": "Menedżer",
+   "type": "passive",
+   "price": 2000000,
+   "sell": 0,
+   "desc": "Twoje biznesy (/biznes) zarabiają o 20% więcej.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "ksiegowy",
+   "name": "Księgowy",
+   "type": "passive",
+   "price": 500000,
+   "sell": 0,
+   "desc": "Magazyn biznesów mieści o 8 godzin więcej, więc rzadziej musisz zbierać.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "podlewaczka",
+   "name": "Podlewaczka",
+   "type": "passive",
+   "price": 40000,
+   "sell": 0,
+   "desc": "Uprawy na farmie (/farma) rosną o 25% szybciej.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "eliksir_zarobkow",
+   "name": "Eliksir zarobków",
+   "type": "boost",
+   "price": 25000,
+   "sell": 0,
+   "desc": "/uzyj – ×2 zarobki z pracy, żebrania, quizów i przestępstw na 30 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "mega_eliksir",
+   "name": "Mega eliksir zarobków",
+   "type": "boost",
+   "price": 120000,
+   "sell": 0,
+   "desc": "/uzyj – ×3 zarobki na 15 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "podrecznik",
+   "name": "Podręcznik",
+   "type": "boost",
+   "price": 10000,
+   "sell": 0,
+   "desc": "/uzyj – ×2 XP na 30 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "mega_podrecznik",
+   "name": "Mega podręcznik",
+   "type": "boost",
+   "price": 60000,
+   "sell": 0,
+   "desc": "/uzyj – ×3 XP na 15 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "magnes_lupu",
+   "name": "Magnes na łup",
+   "type": "boost",
+   "price": 20000,
+   "sell": 0,
+   "desc": "/uzyj – ×2 łup z ryb, kopalni, polowania i lasu na 30 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "mega_magnes",
+   "name": "Mega magnes",
+   "type": "boost",
+   "price": 80000,
+   "sell": 0,
+   "desc": "/uzyj – ×3 łup na 15 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "eliksir_szczescia",
+   "name": "Eliksir szczęścia",
+   "type": "boost",
+   "price": 20000,
+   "sell": 0,
+   "desc": "/uzyj – ×2 szansa na rzadkie łupy na 30 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zegarek",
+   "name": "Przyspieszacz",
+   "type": "boost",
+   "price": 30000,
+   "sell": 0,
+   "desc": "/uzyj – cooldowny o połowę krótsze na 15 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "super_zegarek",
+   "name": "Super przyspieszacz",
+   "type": "boost",
+   "price": 150000,
+   "sell": 0,
+   "desc": "/uzyj – cooldowny o 75% krótsze na 10 min.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "koniczyna",
+   "name": "Czterolistna koniczyna",
+   "type": "consumable",
+   "price": 1500,
+   "sell": 0,
+   "desc": "/uzyj – 5 kolejnych wygranych w hazardzie: +20% zysku (maks. 300 na wygraną).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "polisa_mala",
+   "name": "Polisa mała",
+   "type": "protection",
+   "price": 2000,
+   "sell": 0,
+   "desc": "/uzyj – gdy przegrasz rundę, stawka wraca (do 2 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "polisa_srednia",
+   "name": "Polisa średnia",
+   "type": "protection",
+   "price": 25000,
+   "sell": 0,
+   "desc": "/uzyj – gdy przegrasz rundę, stawka wraca (do 25 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "polisa_duza",
+   "name": "Polisa duża",
+   "type": "protection",
+   "price": 300000,
+   "sell": 0,
+   "desc": "/uzyj – gdy przegrasz rundę, stawka wraca (do 300 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "polisa_platynowa",
+   "name": "Polisa platynowa",
+   "type": "protection",
+   "price": 3000000,
+   "sell": 0,
+   "desc": "/uzyj – gdy przegrasz rundę, stawka wraca (do 3 000 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "tarcza_mala",
+   "name": "Tarcza błędu",
+   "type": "protection",
+   "price": 10000,
+   "sell": 0,
+   "desc": "/uzyj – pierwszy zły klik (mina, auto, zła karta) się nie liczy, grasz dalej (stawki do 5 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "tarcza_srednia",
+   "name": "Tarcza wzmocniona",
+   "type": "protection",
+   "price": 100000,
+   "sell": 0,
+   "desc": "/uzyj – pierwszy zły klik się nie liczy (stawki do 50 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "tarcza_duza",
+   "name": "Tarcza pancerna",
+   "type": "protection",
+   "price": 1000000,
+   "sell": 0,
+   "desc": "/uzyj – pierwszy zły klik się nie liczy (stawki do 500 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "tarcza_tytanowa",
+   "name": "Tarcza tytanowa",
+   "type": "protection",
+   "price": 10000000,
+   "sell": 0,
+   "desc": "/uzyj – pierwszy zły klik się nie liczy (stawki do 5 000 000).",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzynka",
+   "name": "Drewniana skrzynka",
+   "type": "crate",
+   "price": 1000,
+   "sell": 0,
+   "desc": "Tania skrzynka: drobne nagrody i szansa na coś lepszego.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzynia",
+   "name": "Skrzynia skarbów",
+   "type": "crate",
+   "price": 3000,
+   "sell": 0,
+   "desc": "Pieniądze, ulepszenia i szansa na skrzynię diamentową.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzynia_zbieracza",
+   "name": "Skrzynia zbieracza",
+   "type": "crate",
+   "price": 5000,
+   "sell": 0,
+   "desc": "Pełna rzadkich ryb, rud i zwierzyny, które od razu sprzedasz.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzynia_hazardzisty",
+   "name": "Skrzynia hazardzisty",
+   "type": "crate",
+   "price": 10000,
+   "sell": 0,
+   "desc": "Polisy, tarcze, koniczyny i gotówka dla ludzi z nerwami.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzynia_diamentowa",
+   "name": "Skrzynia diamentowa",
+   "type": "crate",
+   "price": 15000,
+   "sell": 0,
+   "desc": "Duże wygrane, sejfy i złote kilofy. Może ukrywać legendarną skrzynię.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "skrzynia_legendarna",
+   "name": "Skrzynia legendarna",
+   "type": "crate",
+   "price": 100000,
+   "sell": 0,
+   "desc": "Dla odważnych: do miliona monet, a nawet Złote trofeum.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "luks_okulary",
+   "name": "Okulary przeciwsłoneczne",
+   "type": "luxury",
+   "price": 10000,
+   "sell": 0,
+   "desc": "Najtańszy sposób, żeby wyglądać na bogatego.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_zegarek",
+   "name": "Złoty zegarek",
+   "type": "luxury",
+   "price": 25000,
+   "sell": 0,
+   "desc": "Pokazuje tylko godzinę „czas na pieniądze”.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_cylinder",
+   "name": "Cylinder",
+   "type": "luxury",
+   "price": 60000,
+   "sell": 0,
+   "desc": "Dla dżentelmenów i magików.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_pierscien",
+   "name": "Pierścień z brylantem",
+   "type": "luxury",
+   "price": 150000,
+   "sell": 0,
+   "desc": "Błyszczy nawet w nocy.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_samochod",
+   "name": "Sportowy samochód",
+   "type": "luxury",
+   "price": 1000000,
+   "sell": 0,
+   "desc": "Szybki, głośny, bezużyteczny w korkach.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_jacht",
+   "name": "Jacht",
+   "type": "luxury",
+   "price": 5000000,
+   "sell": 0,
+   "desc": "Ma basen. I drugi basen.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_wyspa",
+   "name": "Prywatna wyspa",
+   "type": "luxury",
+   "price": 25000000,
+   "sell": 0,
+   "desc": "Palmy w komplecie, sąsiadów brak.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_zamek",
+   "name": "Zamek",
+   "type": "luxury",
+   "price": 100000000,
+   "sell": 0,
+   "desc": "Z fosą i własnym duchem.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_odrzutowiec",
+   "name": "Prywatny odrzutowiec",
+   "type": "luxury",
+   "price": 400000000,
+   "sell": 0,
+   "desc": "Na śniadanie do Paryża, na obiad do Tokio.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_satelita",
+   "name": "Własny satelita",
+   "type": "luxury",
+   "price": 1500000000,
+   "sell": 0,
+   "desc": "Krąży nad Twoim domem i nikt nie wie po co.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_ksiezyc",
+   "name": "Kawałek Księżyca",
+   "type": "luxury",
+   "price": 5000000000,
+   "sell": 0,
+   "desc": "Akt notarialny w komplecie (nieważny).",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "luks_planeta",
+   "name": "Własna planeta",
+   "type": "luxury",
+   "price": 50000000000,
+   "sell": 0,
+   "desc": "Absolutny szczyt. Nazwij ją jak chcesz.",
+   "unique": true,
+   "requires": null
+  },
+  {
+   "id": "trofeum",
+   "name": "Złote trofeum",
+   "type": "trophy",
+   "price": 1000000,
+   "sell": 0,
+   "desc": "Dla prawdziwych milionerów. Wyświetla się na profilu.",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "but",
+   "name": "Stary but",
+   "type": "loot",
+   "price": 0,
+   "sell": 2,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "sledz",
+   "name": "Śledź",
+   "type": "loot",
+   "price": 0,
+   "sell": 25,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "karp",
+   "name": "Karp",
+   "type": "loot",
+   "price": 0,
+   "sell": 60,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "szczupak",
+   "name": "Szczupak",
+   "type": "loot",
+   "price": 0,
+   "sell": 130,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "sum",
+   "name": "Sum",
+   "type": "loot",
+   "price": 0,
+   "sell": 260,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "tunczyk",
+   "name": "Tuńczyk",
+   "type": "loot",
+   "price": 0,
+   "sell": 450,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "rekin",
+   "name": "Rekin",
+   "type": "loot",
+   "price": 0,
+   "sell": 1800,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "kamien",
+   "name": "Kamień",
+   "type": "loot",
+   "price": 0,
+   "sell": 4,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "wegiel",
+   "name": "Węgiel",
+   "type": "loot",
+   "price": 0,
+   "sell": 20,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zelazo",
+   "name": "Żelazo",
+   "type": "loot",
+   "price": 0,
+   "sell": 55,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zloto",
+   "name": "Złoto",
+   "type": "loot",
+   "price": 0,
+   "sell": 140,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "diament",
+   "name": "Diament",
+   "type": "loot",
+   "price": 0,
+   "sell": 480,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "rubin",
+   "name": "Rubin",
+   "type": "loot",
+   "price": 0,
+   "sell": 900,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "meteoryt",
+   "name": "Meteoryt",
+   "type": "loot",
+   "price": 0,
+   "sell": 2500,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "krolik",
+   "name": "Królik",
+   "type": "loot",
+   "price": 0,
+   "sell": 35,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "kaczka",
+   "name": "Kaczka",
+   "type": "loot",
+   "price": 0,
+   "sell": 60,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "jelen",
+   "name": "Jeleń",
+   "type": "loot",
+   "price": 0,
+   "sell": 200,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "dzik",
+   "name": "Dzik",
+   "type": "loot",
+   "price": 0,
+   "sell": 340,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "niedzwiedz",
+   "name": "Niedźwiedź",
+   "type": "loot",
+   "price": 0,
+   "sell": 1200,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zubr",
+   "name": "Żubr",
+   "type": "loot",
+   "price": 0,
+   "sell": 2200,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "szyszka",
+   "name": "Szyszka",
+   "type": "loot",
+   "price": 0,
+   "sell": 6,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "jagody",
+   "name": "Jagody",
+   "type": "loot",
+   "price": 0,
+   "sell": 30,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "kurki",
+   "name": "Kurki",
+   "type": "loot",
+   "price": 0,
+   "sell": 75,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "borowik",
+   "name": "Borowik",
+   "type": "loot",
+   "price": 0,
+   "sell": 150,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "trufla",
+   "name": "Trufla",
+   "type": "loot",
+   "price": 0,
+   "sell": 700,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zloty_grzyb",
+   "name": "Złoty grzyb",
+   "type": "loot",
+   "price": 0,
+   "sell": 3000,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "puszka",
+   "name": "Puszka",
+   "type": "loot",
+   "price": 0,
+   "sell": 3,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "butelka",
+   "name": "Butelka",
+   "type": "loot",
+   "price": 0,
+   "sell": 8,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "stary_telefon",
+   "name": "Stary telefon",
+   "type": "loot",
+   "price": 0,
+   "sell": 140,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zepsuty_zegarek",
+   "name": "Zepsuty zegarek",
+   "type": "loot",
+   "price": 0,
+   "sell": 320,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  },
+  {
+   "id": "zlota_obraczka",
+   "name": "Złota obrączka",
+   "type": "loot",
+   "price": 0,
+   "sell": 1500,
+   "desc": "",
+   "unique": false,
+   "requires": null
+  }
+ ],
+ "categories": [
+  {
+   "id": "wedki",
+   "title": "Wędki i kilofy",
+   "items": [
+    "wedka",
+    "super_wedka",
+    "wedka_mistrza",
+    "wedka_legendarna",
+    "kilof",
+    "zloty_kilof",
+    "diamentowy_kilof",
+    "kilof_kosmiczny"
+   ]
+  },
+  {
+   "id": "bron",
+   "title": "Broń, koszyki, instrumenty",
+   "items": [
+    "strzelba",
+    "karabin",
+    "luneta",
+    "snajperka",
+    "koszyk",
+    "wielki_koszyk",
+    "gitara",
+    "skrzypce",
+    "fortepian"
+   ]
+  },
+  {
+   "id": "ochrona",
+   "title": "Ochrona i sprzęt",
+   "items": [
+    "klodka",
+    "maska",
+    "alarm",
+    "lom",
+    "laptop",
+    "garnitur",
+    "samochod",
+    "pas_narzedziowy",
+    "talizman"
+   ]
+  },
+  {
+   "id": "zwierzaki",
+   "title": "Zwierzaki",
+   "items": [
+    "pies",
+    "kot",
+    "papuga",
+    "sowa",
+    "jednorozec",
+    "smok"
+   ]
+  },
+  {
+   "id": "vip",
+   "title": "Karty VIP i wiedza",
+   "items": [
+    "vip_brazowy",
+    "vip_srebrny",
+    "vip_zloty",
+    "vip_platynowa",
+    "vip_diamentowa",
+    "dyplom",
+    "doktorat"
+   ]
+  },
+  {
+   "id": "finanse",
+   "title": "Finanse i biznes",
+   "items": [
+    "konto_oszczednosciowe",
+    "konto_premium",
+    "menedzer",
+    "ksiegowy",
+    "podlewaczka"
+   ]
+  },
+  {
+   "id": "eliksiry",
+   "title": "Eliksiry czasowe",
+   "items": [
+    "eliksir_zarobkow",
+    "mega_eliksir",
+    "podrecznik",
+    "mega_podrecznik",
+    "magnes_lupu",
+    "mega_magnes",
+    "eliksir_szczescia",
+    "zegarek",
+    "super_zegarek",
+    "koniczyna"
+   ]
+  },
+  {
+   "id": "gry",
+   "title": "Ochrona w grach",
+   "items": [
+    "polisa_mala",
+    "polisa_srednia",
+    "polisa_duza",
+    "polisa_platynowa",
+    "tarcza_mala",
+    "tarcza_srednia",
+    "tarcza_duza",
+    "tarcza_tytanowa"
+   ]
+  },
+  {
+   "id": "skrzynie",
+   "title": "Skrzynie",
+   "items": [
+    "skrzynka",
+    "skrzynia",
+    "skrzynia_zbieracza",
+    "skrzynia_hazardzisty",
+    "skrzynia_diamentowa",
+    "skrzynia_legendarna"
+   ]
+  },
+  {
+   "id": "luksus",
+   "title": "Luksus i prestiż",
+   "items": [
+    "luks_okulary",
+    "luks_zegarek",
+    "luks_cylinder",
+    "luks_pierscien",
+    "luks_samochod",
+    "luks_jacht",
+    "luks_wyspa",
+    "luks_zamek",
+    "luks_odrzutowiec",
+    "luks_satelita",
+    "luks_ksiezyc",
+    "luks_planeta",
+    "trofeum"
+   ]
+  }
+ ],
+ "effects": {
+  "laptop": {
+   "praca": 0.25
+  },
+  "garnitur": {
+   "praca": 0.15
+  },
+  "samochod": {
+   "praca": 0.25
+  },
+  "dyplom": {
+   "xp": 0.25
+  },
+  "doktorat": {
+   "xp": 0.5
+  },
+  "sowa": {
+   "xp": 0.1
+  },
+  "talizman": {
+   "luck": 0.25
+  },
+  "kot": {
+   "luck": 0.1
+  },
+  "jednorozec": {
+   "luck": 0.3,
+   "xp": 0.1
+  },
+  "papuga": {
+   "earn": 0.05
+  },
+  "smok": {
+   "earn": 0.15,
+   "xp": 0.15,
+   "luck": 0.1
+  },
+  "pies": {
+   "robDefense": 0.15
+  },
+  "menedzer": {
+   "bizIncome": 0.2
+  },
+  "ksiegowy": {
+   "bizStorage": 8
+  },
+  "podlewaczka": {
+   "farmSpeed": 0.25
+  }
+ },
+ "boosts": [
+  {
+   "id": "eliksir_zarobkow",
+   "key": "zarobki",
+   "effect": "earn",
+   "value": 2,
+   "duration": 1800000,
+   "label": "×2 zarobki"
+  },
+  {
+   "id": "mega_eliksir",
+   "key": "zarobki_mega",
+   "effect": "earn",
+   "value": 3,
+   "duration": 900000,
+   "label": "×3 zarobki"
+  },
+  {
+   "id": "podrecznik",
+   "key": "xp",
+   "effect": "xp",
+   "value": 2,
+   "duration": 1800000,
+   "label": "×2 XP"
+  },
+  {
+   "id": "mega_podrecznik",
+   "key": "xp_mega",
+   "effect": "xp",
+   "value": 3,
+   "duration": 900000,
+   "label": "×3 XP"
+  },
+  {
+   "id": "magnes_lupu",
+   "key": "lup",
+   "effect": "loot",
+   "value": 2,
+   "duration": 1800000,
+   "label": "×2 łup"
+  },
+  {
+   "id": "mega_magnes",
+   "key": "lup_mega",
+   "effect": "loot",
+   "value": 3,
+   "duration": 900000,
+   "label": "×3 łup"
+  },
+  {
+   "id": "eliksir_szczescia",
+   "key": "szczescie",
+   "effect": "luck",
+   "value": 2,
+   "duration": 1800000,
+   "label": "×2 szansa na rzadkie łupy"
+  },
+  {
+   "id": "zegarek",
+   "key": "zegarek",
+   "effect": "cooldown",
+   "value": 0.5,
+   "duration": 900000,
+   "label": "cooldowny −50%"
+  },
+  {
+   "id": "super_zegarek",
+   "key": "zegarek_super",
+   "effect": "cooldown",
+   "value": 0.25,
+   "duration": 600000,
+   "label": "cooldowny −75%"
+  }
+ ],
+ "protections": [
+  {
+   "id": "polisa_mala",
+   "kind": "polisa",
+   "cap": 2000
+  },
+  {
+   "id": "polisa_srednia",
+   "kind": "polisa",
+   "cap": 25000
+  },
+  {
+   "id": "polisa_duza",
+   "kind": "polisa",
+   "cap": 300000
+  },
+  {
+   "id": "polisa_platynowa",
+   "kind": "polisa",
+   "cap": 3000000
+  },
+  {
+   "id": "tarcza_mala",
+   "kind": "tarcza",
+   "cap": 5000
+  },
+  {
+   "id": "tarcza_srednia",
+   "kind": "tarcza",
+   "cap": 50000
+  },
+  {
+   "id": "tarcza_duza",
+   "kind": "tarcza",
+   "cap": 500000
+  },
+  {
+   "id": "tarcza_tytanowa",
+   "kind": "tarcza",
+   "cap": 5000000
+  }
+ ],
+ "bonuses": {
+  "vip": {
+   "vip_brazowy": 0.1,
+   "vip_srebrny": 0.25,
+   "vip_zloty": 0.5,
+   "vip_platynowa": 1,
+   "vip_diamentowa": 2
+  },
+  "breakChance": 0.05,
+  "breakChanceBelt": 0.01,
+  "interest": {
+   "base": {
+    "rate": 0.02,
+    "cap": 25000
+   },
+   "konto_oszczednosciowe": {
+    "rate": 0.04,
+    "cap": 50000
+   },
+   "konto_premium": {
+    "rate": 0.06,
+    "cap": 150000
+   }
+  },
+  "cloverPct": 0.2,
+  "cloverMax": 300
+ },
+ "vipCards": [
+  "vip_diamentowa",
+  "vip_platynowa",
+  "vip_zloty",
+  "vip_srebrny",
+  "vip_brazowy"
+ ],
+ "businesses": [
+  {
+   "id": "kiosk",
+   "name": "Kiosk z gazetami",
+   "price": 20000,
+   "hourly": 400
+  },
+  {
+   "id": "pizzeria",
+   "name": "Pizzeria",
+   "price": 150000,
+   "hourly": 3000
+  },
+  {
+   "id": "sklep",
+   "name": "Sklep osiedlowy",
+   "price": 600000,
+   "hourly": 12500
+  },
+  {
+   "id": "myjnia",
+   "name": "Myjnia samochodowa",
+   "price": 2500000,
+   "hourly": 55000
+  },
+  {
+   "id": "hotel",
+   "name": "Hotel",
+   "price": 12000000,
+   "hourly": 280000
+  },
+  {
+   "id": "it",
+   "name": "Firma IT",
+   "price": 60000000,
+   "hourly": 1500000
+  },
+  {
+   "id": "kasyno",
+   "name": "Własne kasyno",
+   "price": 300000000,
+   "hourly": 8000000
+  },
+  {
+   "id": "korporacja",
+   "name": "Kosmiczna korporacja",
+   "price": 2000000000,
+   "hourly": 60000000
+  }
+ ],
+ "businessMaxLevel": 5,
+ "storageHours": 8,
+ "crops": [
+  {
+   "id": "marchew",
+   "name": "Marchew",
+   "cost": 100,
+   "yield": 160,
+   "minutes": 5
+  },
+  {
+   "id": "ziemniak",
+   "name": "Ziemniaki",
+   "cost": 500,
+   "yield": 850,
+   "minutes": 20
+  },
+  {
+   "id": "kukurydza",
+   "name": "Kukurydza",
+   "cost": 2000,
+   "yield": 3600,
+   "minutes": 60
+  },
+  {
+   "id": "pomidor",
+   "name": "Pomidory",
+   "cost": 10000,
+   "yield": 18500,
+   "minutes": 180
+  },
+  {
+   "id": "dynia",
+   "name": "Dynie",
+   "cost": 50000,
+   "yield": 96000,
+   "minutes": 480
+  },
+  {
+   "id": "winogrona",
+   "name": "Winnica",
+   "cost": 250000,
+   "yield": 480000,
+   "minutes": 720
+  },
+  {
+   "id": "zen_szen",
+   "name": "Złoty żeń-szeń",
+   "cost": 2000000,
+   "yield": 3800000,
+   "minutes": 1440
+  }
+ ],
+ "farmSlots": 4,
+ "jobs": [
+  {
+   "id": "sprzatacz",
+   "name": "Sprzątacz",
+   "level": 1,
+   "min": 80,
+   "max": 180,
+   "lines": [
+    "Wyszorowałeś całe biuro na błysk.",
+    "Znalazłeś w koszu coś, co ktoś ewidentnie wyrzucił przez pomyłkę.",
+    "Umyłeś okna na 12. piętrze. Nie patrzyłeś w dół."
+   ]
+  },
+  {
+   "id": "kurier",
+   "name": "Kurier",
+   "level": 3,
+   "min": 150,
+   "max": 320,
+   "lines": [
+    "Dowiozłeś 40 paczek, a klienci byli nawet mili.",
+    "Paczka z kapciami dotarła cała. To już sukces.",
+    "Wjechałeś w korek, ale i tak zdążyłeś przed 18:00."
+   ]
+  },
+  {
+   "id": "kucharz",
+   "name": "Kucharz",
+   "level": 5,
+   "min": 250,
+   "max": 480,
+   "lines": [
+    "Twoje pierogi zniknęły ze stołu w 5 minut.",
+    "Szef kuchni pochwalił Twój sos. Raz. Cicho.",
+    "Zrobiłeś zapiekankę stulecia."
+   ]
+  },
+  {
+   "id": "programista",
+   "name": "Programista",
+   "level": 8,
+   "min": 400,
+   "max": 800,
+   "lines": [
+    "Naprawiłeś buga, który tkwił w kodzie od 2014 roku.",
+    "Wrzuciłeś na produkcję w piątek o 16:59. Nic nie wybuchło.",
+    "Stack Overflow znów uratował Ci dzień."
+   ]
+  },
+  {
+   "id": "lekarz",
+   "name": "Lekarz",
+   "level": 12,
+   "min": 650,
+   "max": 1200,
+   "lines": [
+    "Przyjąłeś 30 pacjentów i dalej masz siłę żyć.",
+    "Postawiłeś trafną diagnozę – „odpoczywaj i pij wodę”.",
+    "Dyżur nocny zaliczony, kawa to teraz Twoja krew."
+   ]
+  },
+  {
+   "id": "pilot",
+   "name": "Pilot",
+   "level": 16,
+   "min": 900,
+   "max": 1700,
+   "lines": [
+    "Lądowanie 10/10. Pasażerowie klaskali.",
+    "Przeleciałeś nad Alpami w pięknej pogodzie.",
+    "Turbulencje były, ale kawa się nie wylała."
+   ]
+  },
+  {
+   "id": "ceo",
+   "name": "Prezes",
+   "level": 25,
+   "min": 1500,
+   "max": 3000,
+   "lines": [
+    "Odbyłeś spotkanie, które mogło być mailem. Ale zarobiłeś.",
+    "Wykupiłeś konkurencję. Pomyślnie.",
+    "Zatwierdziłeś budżet i pojechałeś na golfa."
+   ]
+  }
+ ],
+ "crimes": [
+  {
+   "win": "Okradłeś kantor, nikt nawet nie mrugnął.",
+   "lose": "Wpadłeś na kamerę monitoringu w kantorze."
+  },
+  {
+   "win": "Podmieniłeś obraz w galerii. Nikt nie zauważył różnicy.",
+   "lose": "Alarm w galerii wył tak głośno, że słychać go było do Berlina."
+  },
+  {
+   "win": "Zhakowałeś bankomat i wypłacił Ci, ile chciałeś.",
+   "lose": "Bankomat zjadł Twoją kartę i zadzwonił po policję."
+  },
+  {
+   "win": "Wyniosłeś z hotelu sejf w walizce.",
+   "lose": "Walizka z sejfem okazała się za ciężka. Ochroniarz pomógł Ci ją zanieść... na komisariat."
+  },
+  {
+   "win": "Sprzedałeś turystom „oryginalną” wieżę Eiffla.",
+   "lose": "Turysta okazał się policjantem po cywilnemu."
+  },
+  {
+   "win": "Obrobiłeś kasyno z żetonów w trakcie awarii prądu.",
+   "lose": "Awaria prądu się skończyła. Dokładnie w tym momencie."
+  }
+ ],
+ "trivia": [
+  {
+   "q": "Ile planet ma Układ Słoneczny?",
+   "a": "8",
+   "w": [
+    "7",
+    "9",
+    "10"
+   ]
+  },
+  {
+   "q": "Jaki symbol chemiczny ma złoto?",
+   "a": "Au",
+   "w": [
+    "Ag",
+    "Go",
+    "Gd"
+   ]
+  },
+  {
+   "q": "Najdłuższa rzeka w Polsce to...",
+   "a": "Wisła",
+   "w": [
+    "Odra",
+    "Warta",
+    "Bug"
+   ]
+  },
+  {
+   "q": "Kto napisał „Pana Tadeusza”?",
+   "a": "Adam Mickiewicz",
+   "w": [
+    "Juliusz Słowacki",
+    "Henryk Sienkiewicz",
+    "Bolesław Prus"
+   ]
+  },
+  {
+   "q": "W którym roku Polska wstąpiła do Unii Europejskiej?",
+   "a": "2004",
+   "w": [
+    "1999",
+    "2001",
+    "2007"
+   ]
+  },
+  {
+   "q": "Który ocean jest największy?",
+   "a": "Spokojny",
+   "w": [
+    "Atlantycki",
+    "Indyjski",
+    "Arktyczny"
+   ]
+  },
+  {
+   "q": "Ile kości ma dorosły człowiek?",
+   "a": "206",
+   "w": [
+    "186",
+    "212",
+    "250"
+   ]
+  },
+  {
+   "q": "Stolicą Australii jest...",
+   "a": "Canberra",
+   "w": [
+    "Sydney",
+    "Melbourne",
+    "Perth"
+   ]
+  },
+  {
+   "q": "Najwyższy szczyt w Polsce to...",
+   "a": "Rysy",
+   "w": [
+    "Śnieżka",
+    "Giewont",
+    "Babia Góra"
+   ]
+  },
+  {
+   "q": "W którym roku odbyła się bitwa pod Grunwaldem?",
+   "a": "1410",
+   "w": [
+    "1370",
+    "1525",
+    "1683"
+   ]
+  },
+  {
+   "q": "Które zwierzę lądowe jest najszybsze?",
+   "a": "Gepard",
+   "w": [
+    "Lew",
+    "Antylopa",
+    "Struś"
+   ]
+  },
+  {
+   "q": "Kraj o kształcie buta to...",
+   "a": "Włochy",
+   "w": [
+    "Hiszpania",
+    "Grecja",
+    "Portugalia"
+   ]
+  },
+  {
+   "q": "Kto napisał serię o Wiedźminie?",
+   "a": "Andrzej Sapkowski",
+   "w": [
+    "Stanisław Lem",
+    "Jacek Dukaj",
+    "Remigiusz Mróz"
+   ]
+  },
+  {
+   "q": "Ilu zawodników jednej drużyny gra na boisku w piłce nożnej?",
+   "a": "11",
+   "w": [
+    "9",
+    "10",
+    "12"
+   ]
+  },
+  {
+   "q": "Stolicą Japonii jest...",
+   "a": "Tokio",
+   "w": [
+    "Osaka",
+    "Kioto",
+    "Seul"
+   ]
+  },
+  {
+   "q": "Jaka jest najmniejsza liczba pierwsza?",
+   "a": "2",
+   "w": [
+    "0",
+    "1",
+    "3"
+   ]
+  },
+  {
+   "q": "Kto jako pierwszy stanął na Księżycu?",
+   "a": "Neil Armstrong",
+   "w": [
+    "Buzz Aldrin",
+    "Jurij Gagarin",
+    "Michael Collins"
+   ]
+  },
+  {
+   "q": "Ile strun ma standardowa gitara klasyczna?",
+   "a": "6",
+   "w": [
+    "4",
+    "5",
+    "7"
+   ]
+  },
+  {
+   "q": "Który kontynent jest największy?",
+   "a": "Azja",
+   "w": [
+    "Afryka",
+    "Ameryka Północna",
+    "Europa"
+   ]
+  },
+  {
+   "q": "W którym roku wybuchła II wojna światowa?",
+   "a": "1939",
+   "w": [
+    "1914",
+    "1941",
+    "1945"
+   ]
+  },
+  {
+   "q": "Stolica Hiszpanii to...",
+   "a": "Madryt",
+   "w": [
+    "Barcelona",
+    "Walencja",
+    "Sewilla"
+   ]
+  },
+  {
+   "q": "Kto napisał „Quo vadis”?",
+   "a": "Henryk Sienkiewicz",
+   "w": [
+    "Bolesław Prus",
+    "Stefan Żeromski",
+    "Adam Mickiewicz"
+   ]
+  },
+  {
+   "q": "Ile to jest pierwiastek kwadratowy z 144?",
+   "a": "12",
+   "w": [
+    "11",
+    "14",
+    "16"
+   ]
+  },
+  {
+   "q": "Które jezioro jest najgłębsze na świecie?",
+   "a": "Bajkał",
+   "w": [
+    "Wiktorii",
+    "Tanganika",
+    "Górne"
+   ]
+  },
+  {
+   "q": "Kto namalował „Mona Lisę”?",
+   "a": "Leonardo da Vinci",
+   "w": [
+    "Michał Anioł",
+    "Rafael",
+    "Van Gogh"
+   ]
+  },
+  {
+   "q": "Którą planetę nazywamy Czerwoną Planetą?",
+   "a": "Mars",
+   "w": [
+    "Wenus",
+    "Jowisz",
+    "Merkury"
+   ]
+  },
+  {
+   "q": "Jak nazywa się najwyższy szczyt świata?",
+   "a": "Mount Everest",
+   "w": [
+    "K2",
+    "Mont Blanc",
+    "Kilimandżaro"
+   ]
+  },
+  {
+   "q": "Ile dni ma rok przestępny?",
+   "a": "366",
+   "w": [
+    "364",
+    "365",
+    "367"
+   ]
+  },
+  {
+   "q": "Walutą Japonii jest...",
+   "a": "Jen",
+   "w": [
+    "Won",
+    "Juan",
+    "Rupia"
+   ]
+  },
+  {
+   "q": "Ile kolorów ma tęcza?",
+   "a": "7",
+   "w": [
+    "5",
+    "6",
+    "8"
+   ]
+  },
+  {
+   "q": "Który metal jest płynny w temperaturze pokojowej?",
+   "a": "Rtęć",
+   "w": [
+    "Ołów",
+    "Cynk",
+    "Cyna"
+   ]
+  },
+  {
+   "q": "W którym mieście stoi Wawel?",
+   "a": "Kraków",
+   "w": [
+    "Warszawa",
+    "Gdańsk",
+    "Wrocław"
+   ]
+  },
+  {
+   "q": "Jaki symbol chemiczny ma żelazo?",
+   "a": "Fe",
+   "w": [
+    "Fr",
+    "Ir",
+    "Fo"
+   ]
+  },
+  {
+   "q": "Stolicą Francji jest...",
+   "a": "Paryż",
+   "w": [
+    "Lyon",
+    "Marsylia",
+    "Bruksela"
+   ]
+  },
+  {
+   "q": "Największa planeta Układu Słonecznego to...",
+   "a": "Jowisz",
+   "w": [
+    "Saturn",
+    "Neptun",
+    "Ziemia"
+   ]
+  },
+  {
+   "q": "Kto odkrył penicylinę?",
+   "a": "Alexander Fleming",
+   "w": [
+    "Ludwik Pasteur",
+    "Maria Skłodowska-Curie",
+    "Robert Koch"
+   ]
+  },
+  {
+   "q": "Kto sformułował teorię względności?",
+   "a": "Albert Einstein",
+   "w": [
+    "Isaac Newton",
+    "Nikola Tesla",
+    "Galileusz"
+   ]
+  },
+  {
+   "q": "W którym kraju leży Machu Picchu?",
+   "a": "Peru",
+   "w": [
+    "Meksyk",
+    "Chile",
+    "Kolumbia"
+   ]
+  },
+  {
+   "q": "Ile klawiszy ma standardowy fortepian?",
+   "a": "88",
+   "w": [
+    "61",
+    "76",
+    "100"
+   ]
+  },
+  {
+   "q": "Jak nazywa się hydraulik w czerwonej czapce z gier Nintendo?",
+   "a": "Mario",
+   "w": [
+    "Luigi",
+    "Wario",
+    "Toad"
+   ]
+  },
+  {
+   "q": "Z jakiej gry pochodzi Creeper?",
+   "a": "Minecraft",
+   "w": [
+    "Roblox",
+    "Terraria",
+    "Fortnite"
+   ]
+  },
+  {
+   "q": "Jakiego koloru jest Pikachu?",
+   "a": "Żółtego",
+   "w": [
+    "Pomarańczowego",
+    "Czerwonego",
+    "Niebieskiego"
+   ]
+  },
+  {
+   "q": "Jak nazywa się główny bohater serii The Legend of Zelda?",
+   "a": "Link",
+   "w": [
+    "Zelda",
+    "Ganon",
+    "Epona"
+   ]
+  }
+ ],
+ "bankUpgrades": [
+  {
+   "name": "Sejf domowy",
+   "cost": 50000,
+   "bonus": 150000
+  },
+  {
+   "name": "Skarbiec bankowy",
+   "cost": 250000,
+   "bonus": 400000
+  },
+  {
+   "name": "Własny oddział banku",
+   "cost": 1000000,
+   "bonus": 1500000
+  },
+  {
+   "name": "Podziemny skarbiec",
+   "cost": 5000000,
+   "bonus": 6000000
+  },
+  {
+   "name": "Szwajcarskie konto",
+   "cost": 25000000,
+   "bonus": 30000000
+  },
+  {
+   "name": "Kosmiczny skarbiec",
+   "cost": 150000000,
+   "bonus": 200000000
+  },
+  {
+   "name": "Bank Wszechświata",
+   "cost": 1000000000,
+   "bonus": 1500000000
+  }
+ ],
+ "bank": {
+  "base": 100000,
+  "perLevel": 5000,
+  "sejfBonus": 25000
+ },
+ "startBalance": 500,
+ "cooldowns": {
+  "praca": 600000,
+  "zebraj": 30000,
+  "crime": 300000,
+  "rob": 450000,
+  "robbed": 900000,
+  "heist": 900000,
+  "ryby": 90000,
+  "kopalnia": 120000,
+  "polowanie": 150000,
+  "trivia": 45000,
+  "matma": 30000,
+  "godzinna": 3600000,
+  "las": 120000,
+  "smietnik": 45000,
+  "uliczny": 60000
+ },
+ "gather": [
+  {
+   "key": "ryby",
+   "cooldown": 90000,
+   "missChance": 0,
+   "tools": [
+    {
+     "id": "wedka_legendarna",
+     "luck": 6,
+     "miss": 0
+    },
+    {
+     "id": "wedka_mistrza",
+     "luck": 3.5,
+     "miss": 0
+    },
+    {
+     "id": "super_wedka",
+     "luck": 2,
+     "miss": 0
+    },
+    {
+     "id": "wedka",
+     "luck": 1,
+     "miss": 0
+    }
+   ],
+   "table": [
+    {
+     "id": "but",
+     "w": 15,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": false
+    },
+    {
+     "id": "sledz",
+     "w": 30,
+     "qty": [
+      1,
+      2
+     ],
+     "rare": false
+    },
+    {
+     "id": "karp",
+     "w": 25,
+     "qty": [
+      1,
+      2
+     ],
+     "rare": false
+    },
+    {
+     "id": "szczupak",
+     "w": 14,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "sum",
+     "w": 8,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "tunczyk",
+     "w": 5,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "rekin",
+     "w": 1.5,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynka",
+     "w": 2.2,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynia",
+     "w": 0.7,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    }
+   ]
+  },
+  {
+   "key": "kopalnia",
+   "cooldown": 120000,
+   "missChance": 0,
+   "tools": [
+    {
+     "id": "kilof_kosmiczny",
+     "luck": 6,
+     "miss": 0
+    },
+    {
+     "id": "diamentowy_kilof",
+     "luck": 3.5,
+     "miss": 0
+    },
+    {
+     "id": "zloty_kilof",
+     "luck": 2,
+     "miss": 0
+    },
+    {
+     "id": "kilof",
+     "luck": 1,
+     "miss": 0
+    }
+   ],
+   "table": [
+    {
+     "id": "kamien",
+     "w": 25,
+     "qty": [
+      2,
+      5
+     ],
+     "rare": false
+    },
+    {
+     "id": "wegiel",
+     "w": 25,
+     "qty": [
+      1,
+      4
+     ],
+     "rare": false
+    },
+    {
+     "id": "zelazo",
+     "w": 20,
+     "qty": [
+      1,
+      3
+     ],
+     "rare": false
+    },
+    {
+     "id": "zloto",
+     "w": 14,
+     "qty": [
+      1,
+      2
+     ],
+     "rare": true
+    },
+    {
+     "id": "diament",
+     "w": 8,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "rubin",
+     "w": 3,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "meteoryt",
+     "w": 0.8,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynka",
+     "w": 2.2,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynia",
+     "w": 0.7,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    }
+   ]
+  },
+  {
+   "key": "polowanie",
+   "cooldown": 150000,
+   "missChance": 0,
+   "tools": [
+    {
+     "id": "snajperka",
+     "luck": 6,
+     "miss": 0.03
+    },
+    {
+     "id": "luneta",
+     "luck": 3.5,
+     "miss": 0.06
+    },
+    {
+     "id": "karabin",
+     "luck": 2,
+     "miss": 0.12
+    },
+    {
+     "id": "strzelba",
+     "luck": 1,
+     "miss": 0.25
+    }
+   ],
+   "table": [
+    {
+     "id": "krolik",
+     "w": 30,
+     "qty": [
+      1,
+      2
+     ],
+     "rare": false
+    },
+    {
+     "id": "kaczka",
+     "w": 26,
+     "qty": [
+      1,
+      2
+     ],
+     "rare": false
+    },
+    {
+     "id": "jelen",
+     "w": 16,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": false
+    },
+    {
+     "id": "dzik",
+     "w": 10,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "niedzwiedz",
+     "w": 4,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "zubr",
+     "w": 1.2,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynka",
+     "w": 2.2,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynia",
+     "w": 0.7,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    }
+   ]
+  },
+  {
+   "key": "las",
+   "cooldown": 120000,
+   "missChance": 0,
+   "tools": [
+    {
+     "id": "wielki_koszyk",
+     "luck": 3,
+     "miss": 0
+    },
+    {
+     "id": "koszyk",
+     "luck": 1.5,
+     "miss": 0
+    },
+    {
+     "id": null,
+     "luck": 1,
+     "miss": 0
+    }
+   ],
+   "table": [
+    {
+     "id": "szyszka",
+     "w": 25,
+     "qty": [
+      2,
+      5
+     ],
+     "rare": false
+    },
+    {
+     "id": "jagody",
+     "w": 28,
+     "qty": [
+      1,
+      3
+     ],
+     "rare": false
+    },
+    {
+     "id": "kurki",
+     "w": 22,
+     "qty": [
+      1,
+      3
+     ],
+     "rare": false
+    },
+    {
+     "id": "borowik",
+     "w": 12,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "trufla",
+     "w": 3,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "zloty_grzyb",
+     "w": 0.4,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynka",
+     "w": 1.5,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    }
+   ]
+  },
+  {
+   "key": "smietnik",
+   "cooldown": 45000,
+   "missChance": 0.12,
+   "tools": [
+    {
+     "id": null,
+     "luck": 1,
+     "miss": 0
+    }
+   ],
+   "table": [
+    {
+     "id": "puszka",
+     "w": 35,
+     "qty": [
+      2,
+      6
+     ],
+     "rare": false
+    },
+    {
+     "id": "butelka",
+     "w": 30,
+     "qty": [
+      1,
+      4
+     ],
+     "rare": false
+    },
+    {
+     "id": "stary_telefon",
+     "w": 5,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "zepsuty_zegarek",
+     "w": 2,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "zlota_obraczka",
+     "w": 0.4,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    },
+    {
+     "id": "skrzynka",
+     "w": 1,
+     "qty": [
+      1,
+      1
+     ],
+     "rare": true
+    }
+   ]
+  }
+ ],
+ "crates": [
+  {
+   "id": "skrzynka",
+   "loot": [
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 250,
+     "max": 550,
+     "w": 35,
+     "r": "common"
+    },
+    {
+     "kind": "xp",
+     "item": null,
+     "qty": 0,
+     "min": 50,
+     "max": 100,
+     "w": 10,
+     "r": "common"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 700,
+     "max": 1200,
+     "w": 20,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "klodka",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 6,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "maska",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 6,
+     "r": "uncommon"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 1300,
+     "max": 2400,
+     "w": 12,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "koniczyna",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 5,
+     "r": "rare"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 3000,
+     "max": 5500,
+     "w": 4,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "skrzynia",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 1.7,
+     "r": "epic"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 10000,
+     "max": 15000,
+     "w": 0.3,
+     "r": "legendary"
+    }
+   ]
+  },
+  {
+   "id": "skrzynia",
+   "loot": [
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 600,
+     "max": 1300,
+     "w": 34,
+     "r": "common"
+    },
+    {
+     "kind": "xp",
+     "item": null,
+     "qty": 0,
+     "min": 100,
+     "max": 200,
+     "w": 8,
+     "r": "common"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 1700,
+     "max": 3000,
+     "w": 22,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "klodka",
+     "qty": 2,
+     "min": 0,
+     "max": 0,
+     "w": 5,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "maska",
+     "qty": 2,
+     "min": 0,
+     "max": 0,
+     "w": 5,
+     "r": "uncommon"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 3500,
+     "max": 6500,
+     "w": 14,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "koniczyna",
+     "qty": 2,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "rare"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 9000,
+     "max": 16000,
+     "w": 6,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "skrzynia_diamentowa",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 1.5,
+     "r": "epic"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 35000,
+     "max": 60000,
+     "w": 0.5,
+     "r": "legendary"
+    }
+   ]
+  },
+  {
+   "id": "skrzynia_diamentowa",
+   "loot": [
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 3500,
+     "max": 7500,
+     "w": 36,
+     "r": "common"
+    },
+    {
+     "kind": "xp",
+     "item": null,
+     "qty": 0,
+     "min": 300,
+     "max": 500,
+     "w": 8,
+     "r": "common"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 9000,
+     "max": 15000,
+     "w": 22,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "sejf",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "koniczyna",
+     "qty": 3,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "uncommon"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 16000,
+     "max": 30000,
+     "w": 16,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "zloty_kilof",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 3,
+     "r": "rare"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 45000,
+     "max": 80000,
+     "w": 5.5,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "skrzynia_legendarna",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 1,
+     "r": "epic"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 130000,
+     "max": 220000,
+     "w": 0.5,
+     "r": "legendary"
+    }
+   ]
+  },
+  {
+   "id": "skrzynia_zbieracza",
+   "loot": [
+    {
+     "kind": "item",
+     "item": "sledz",
+     "qty": 36,
+     "min": 0,
+     "max": 0,
+     "w": 14,
+     "r": "common"
+    },
+    {
+     "kind": "item",
+     "item": "karp",
+     "qty": 27,
+     "min": 0,
+     "max": 0,
+     "w": 14,
+     "r": "common"
+    },
+    {
+     "kind": "item",
+     "item": "krolik",
+     "qty": 27,
+     "min": 0,
+     "max": 0,
+     "w": 12,
+     "r": "common"
+    },
+    {
+     "kind": "item",
+     "item": "szczupak",
+     "qty": 36,
+     "min": 0,
+     "max": 0,
+     "w": 12,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "zelazo",
+     "qty": 60,
+     "min": 0,
+     "max": 0,
+     "w": 10,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "kurki",
+     "qty": 60,
+     "min": 0,
+     "max": 0,
+     "w": 10,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "sum",
+     "qty": 27,
+     "min": 0,
+     "max": 0,
+     "w": 8,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "diament",
+     "qty": 15,
+     "min": 0,
+     "max": 0,
+     "w": 6,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "jelen",
+     "qty": 27,
+     "min": 0,
+     "max": 0,
+     "w": 6,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "tunczyk",
+     "qty": 40,
+     "min": 0,
+     "max": 0,
+     "w": 3,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "rubin",
+     "qty": 20,
+     "min": 0,
+     "max": 0,
+     "w": 2.5,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "niedzwiedz",
+     "qty": 20,
+     "min": 0,
+     "max": 0,
+     "w": 1.5,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "rekin",
+     "qty": 20,
+     "min": 0,
+     "max": 0,
+     "w": 0.5,
+     "r": "legendary"
+    },
+    {
+     "kind": "item",
+     "item": "meteoryt",
+     "qty": 12,
+     "min": 0,
+     "max": 0,
+     "w": 0.3,
+     "r": "legendary"
+    },
+    {
+     "kind": "item",
+     "item": "skrzynia_diamentowa",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 0.2,
+     "r": "legendary"
+    }
+   ]
+  },
+  {
+   "id": "skrzynia_hazardzisty",
+   "loot": [
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 2000,
+     "max": 4500,
+     "w": 30.4,
+     "r": "common"
+    },
+    {
+     "kind": "item",
+     "item": "polisa_mala",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 12,
+     "r": "common"
+    },
+    {
+     "kind": "item",
+     "item": "koniczyna",
+     "qty": 2,
+     "min": 0,
+     "max": 0,
+     "w": 8,
+     "r": "common"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 4000,
+     "max": 9000,
+     "w": 20,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "koniczyna",
+     "qty": 4,
+     "min": 0,
+     "max": 0,
+     "w": 6,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "tarcza_mala",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "uncommon"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 10000,
+     "max": 20000,
+     "w": 8,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "polisa_srednia",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "eliksir_szczescia",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 2,
+     "r": "rare"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 25000,
+     "max": 50000,
+     "w": 3,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "tarcza_srednia",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 1,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "polisa_duza",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 0.3,
+     "r": "epic"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 80000,
+     "max": 160000,
+     "w": 1.1,
+     "r": "legendary"
+    },
+    {
+     "kind": "item",
+     "item": "tarcza_duza",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 0.15,
+     "r": "legendary"
+    },
+    {
+     "kind": "item",
+     "item": "polisa_platynowa",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 0.05,
+     "r": "legendary"
+    }
+   ]
+  },
+  {
+   "id": "skrzynia_legendarna",
+   "loot": [
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 28000,
+     "max": 55000,
+     "w": 34,
+     "r": "common"
+    },
+    {
+     "kind": "xp",
+     "item": null,
+     "qty": 0,
+     "min": 1000,
+     "max": 2000,
+     "w": 8,
+     "r": "common"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 60000,
+     "max": 100000,
+     "w": 22,
+     "r": "uncommon"
+    },
+    {
+     "kind": "item",
+     "item": "koniczyna",
+     "qty": 5,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "uncommon"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 110000,
+     "max": 190000,
+     "w": 16,
+     "r": "rare"
+    },
+    {
+     "kind": "item",
+     "item": "sejf",
+     "qty": 3,
+     "min": 0,
+     "max": 0,
+     "w": 4,
+     "r": "rare"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 250000,
+     "max": 400000,
+     "w": 8,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "karabin",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 2.9,
+     "r": "epic"
+    },
+    {
+     "kind": "item",
+     "item": "trofeum",
+     "qty": 1,
+     "min": 0,
+     "max": 0,
+     "w": 0.5,
+     "r": "legendary"
+    },
+    {
+     "kind": "money",
+     "item": null,
+     "qty": 0,
+     "min": 700000,
+     "max": 1100000,
+     "w": 0.6,
+     "r": "legendary"
+    }
+   ]
+  }
+ ]
+}

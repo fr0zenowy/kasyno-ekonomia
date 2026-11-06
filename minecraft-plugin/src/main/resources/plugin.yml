@@ -1,0 +1,27 @@
+name: KasynoEkonomia
+version: '${project.version}'
+main: pl.kasyno.KasynoPlugin
+api-version: '1.21.11'
+description: Ekonomia, kasyno, sklep, biznesy i farma w GUI, z NPC otwierającymi menu
+authors: [Kasyno]
+softdepend: []
+
+commands:
+  kasyno:
+    description: Główne menu kasyna i ekonomii
+    aliases: [casino, k]
+    usage: /kasyno [ekran|sala|gra|pack|npc|placeholder|admin|reload]
+
+permissions:
+  kasyno.use:
+    description: Korzystanie z kasyna i ekonomii
+    default: true
+  kasyno.admin:
+    description: Zarządzanie NPC i placeholderami, przeładowanie, dawanie monet i przedmiotów
+    default: op
+  kasyno.shark.bypass:
+    description: Rekiny nie atakują tego gracza podczas pływania
+    default: false
+  kasyno.prison.bypass:
+    description: Nie da się go uwięzić (nieudane przestępstwo, napad), nie obowiązują go ograniczenia w celi
+    default: op
