@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  discord-bot:
+    name: Bot Discord (Node.js)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  minecraft-plugin:
+    name: Plugin Kasyno (Java 21)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+          cache-dependency-path: minecraft-plugin/pom.xml
+      - run: mvn -B -f minecraft-plugin/pom.xml package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KasynoEkonomia
+          path: minecraft-plugin/target/KasynoEkonomia-*.jar
+
+  sport-plugin:
+    name: SportPlugin (Java 21)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+          cache-dependency-path: sport-plugin/pom.xml
+      - run: mvn -B -f sport-plugin/pom.xml package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SportPlugin
+          path: sport-plugin/target/SportPlugin-*.jar
