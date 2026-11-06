@@ -1,0 +1,35 @@
+name: SportPlugin
+version: '${project.version}'
+main: pl.sport.SportPlugin
+api-version: '1.21'
+description: Siatkówka, koszykówka i ping-pong z fizyką piłki, zasadami i punktacją
+authors: [Kasyno]
+
+commands:
+  siatkowka:
+    description: Siatkówka (boiska, dołączanie, mecze)
+    aliases: [volleyball, volley]
+    usage: /siatkowka [pomoc|lista|dolacz|opusc|start|stworz]
+    permission: sport.use
+  koszykowka:
+    description: Koszykówka (boiska, dołączanie, mecze)
+    aliases: [basketball, kosz]
+    usage: /koszykowka [pomoc|lista|dolacz|opusc|start|stworz]
+    permission: sport.use
+  pingpong:
+    description: Ping-pong (stoły, dołączanie, mecze)
+    aliases: [pong, tenisstolowy]
+    usage: /pingpong [pomoc|lista|dolacz|opusc|start|stworz]
+    permission: sport.use
+  sport:
+    description: Wspólne polecenia sportowe (lista boisk, opuszczenie meczu)
+    usage: /sport [pomoc|lista|opusc]
+    permission: sport.use
+
+permissions:
+  sport.use:
+    description: Granie w siatkówkę, koszykówkę i ping-ponga
+    default: true
+  sport.admin:
+    description: Tworzenie, usuwanie i przebudowa boisk, zatrzymywanie meczów
+    default: op

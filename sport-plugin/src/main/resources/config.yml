@@ -1,0 +1,110 @@
+# SportPlugin: siatkówka i koszykówka.
+# Wszystkie wartości mają domyślne w kodzie, więc możesz usunąć dowolną linię. Po zmianach: /sport reload (albo restart).
+
+wspolne:
+  # Sekundy odliczania przed startem meczu (liczone od chwili, gdy obie drużyny mają dość graczy).
+  odliczanie-sekundy: 10
+  # Ilu graczy minimum musi mieć każda drużyna, żeby mecz mógł wystartować.
+  min-graczy-w-druzynie: 1
+  # Czy odliczanie zaczyna się samo, gdy są obie drużyny. Przy false trzeba wpisać /sport start.
+  autostart: true
+  # Gracze w meczu nie niszczą ani nie stawiają bloków.
+  chron-boisko: true
+
+pilka:
+  # Jak daleko od oczu gracza (w blokach) można dosięgnąć piłkę.
+  zasieg: 3.0
+  # Najkrótszy odstęp między dwoma uderzeniami tego samego gracza.
+  odstep-uderzen-sekundy: 0.30
+  # Cień piłki na podłodze (pomaga ocenić, gdzie spadnie).
+  cien: true
+  # Ile ticków klient wygładza ruch piłki (1 = płynnie i prawie bez opóźnienia, 0 = skoki co tick, 2-3 = bardzo gładko, ale z opóźnieniem).
+  interpolacja-ticki: 1
+  # Wygląd piłki bez paczki zasobów: zwykły przedmiot (używany tylko wtedy, gdy model poniżej jest pusty).
+  przedmiot-siatkowka: SNOWBALL
+  przedmiot-koszykowka: MAGMA_CREAM
+  przedmiot-pingpong: SNOWBALL
+  # Model 3D piłki z paczki zasobów Kasyna (KasynoUI.zip z tej samej wersji co plugin Kasyno; gracze muszą mieć ją załadowaną).
+  # Piłka kręci się w locie i toczy po podłodze. Wpisz brak, żeby użyć zwykłego przedmiotu z góry (bez paczki). Puste pole oznacza model domyślny.
+  model-siatkowka: "kasyno:ball_volley"
+  model-koszykowka: "kasyno:ball_basket"
+  model-pingpong: ""           # piłeczka do ping-ponga jest zwykłym przedmiotem (maleńka, model by jej nie poprawił)
+
+siatkowka:
+  # Wymiary boiska budowanego komendą /siatkowka stworz (w blokach). Długość musi być parzysta.
+  dlugosc-boiska: 18
+  szerokosc-boiska: 9
+  wysokosc-siatki: 2.43        # 2.43 mężczyźni, 2.24 kobiety
+  sety-do-wygrania: 2          # 2 = do dwóch wygranych setów (maksymalnie 3 sety)
+  punkty-w-secie: 25
+  punkty-w-secie-decydujacym: 15
+  max-graczy-w-druzynie: 6
+  czas-na-zagrywke-sekundy: 10
+  material-podlogi: SMOOTH_SANDSTONE
+  material-obrzeza: LIGHT_GRAY_CONCRETE
+  material-linii: WHITE_CONCRETE
+  material-linii-dodatkowych: LIGHT_BLUE_CONCRETE   # linie ataku (3 m od siatki)
+
+koszykowka:
+  dlugosc-boiska: 28
+  szerokosc-boiska: 15
+  minuty: 5                    # czas meczu (liczony tylko, gdy piłka jest w grze)
+  punkty-do-wygrania: 0        # >0: mecz trwa do tylu punktów i czas się nie liczy (np. 21)
+  zegar-akcji-sekundy: 24
+  dogrywka-sekundy: 60         # 0 = przy remisie gra toczy się do pierwszego kosza
+  max-graczy-w-druzynie: 5
+  # 1.0 = normalnie; więcej = rzuty celniejsze, mniej = trudniejsze (zakres 0.3-3).
+  celnosc: 1.1
+  # Jak blisko piłki (w blokach) trzeba podejść, żeby ją wziąć.
+  zasieg-podniesienia: 1.1
+  # Podstawowa szansa udanego przechwytu piłki od kozłującego rywala (0-1; 10 = zawsze).
+  # Realna szansa zależy od sytuacji: piłka nisko przy podłodze, atak od tyłu i bliskość ją zwiększają,
+  # a osłona ciałem (Shift), sprint i wyskok kozłującego zmniejszają.
+  szansa-przechwytu: 0.35
+  # Specjalne rzuty z bliska: dwutakt (rzut LPM w biegu w stronę kosza, do ok. 4,8 m) i wsad (w biegu albo w wyskoku, do ok. 3 m).
+  techniki: true
+  # Celność dwutaktu (mnożnik, 1 = jak zwykły rzut).
+  celnosc-dwutaktu: 1.7
+  # Wsad wymaga biegu w stronę kosza i wyskoku (skok + LPM pod koszem). Wpada z szansą zależną od wyskoku, prędkości, odległości i obrońcy;
+  # trudność dzieli tę szansę (1 = normalnie, 2 = dwa razy trudniej, 0 = wsad zawsze wpada). Niecelny wsad odbija się od obręczy.
+  wsad-trudnosc: 1.0
+  # Po próbie wsadu (udanej albo nie) gracz odpoczywa tyle sekund; w tym czasie wyskok pod koszem to zwykły dwutakt.
+  wsad-odpoczynek-sekundy: 10
+  # Faule wymagają kontaktu: zahaczenie od tyłu przy przechwycie, uderzenie po rękach rzucającego (spóźniony blok albo przechwyt w trakcie rzutu),
+  # wejście w piłkę osłoniętą ciałem i faul w ataku (bieg z piłką w stojącego obrońcę). Samo stanie obok rywala nigdy nie jest faulem.
+  faule: true
+  # Mnożnik szansy odgwizdania faulu w sytuacjach z kontaktem (1 = normalnie, 0,5 = co drugi taki kontakt, 0 = nigdy).
+  szansa-faulu: 1.0
+  # Od którego faulu drużyny każdy kolejny faul daje dwa rzuty osobiste.
+  faule-premia: 5
+  # Po ilu faulach osobistych gracz wylatuje z meczu (0 = bez limitu).
+  faule-limit: 6
+  # Celność rzutów osobistych (mnożnik względem zwykłego rzutu z tej odległości).
+  celnosc-rzutow-osobistych: 1.35
+  material-podlogi: BIRCH_PLANKS
+  material-obrzeza: LIGHT_GRAY_CONCRETE
+  material-linii: WHITE_CONCRETE
+  material-linii-dodatkowych: RED_TERRACOTTA        # pola podkoszowe
+
+pingpong:
+  # Hala, w której stoi stół (w blokach). Stół jest na środku, siatka w połowie jego długości.
+  dlugosc-boiska: 12
+  szerokosc-boiska: 8
+  # Skala stołu względem prawdziwego (2,74 x 1,525 m). W grze 1,5 daje stół, przy którym da się grać kliknięciami; dotyczy nowo stawianych stołów (istniejący zachowuje skalę z chwili budowy).
+  skala: 1.5
+  gemy-do-wygrania: 2          # 2 = do dwóch wygranych gemów (maksymalnie 3 gemy), 3 = do trzech (maksymalnie 5)
+  punkty-w-gemie: 11
+  max-graczy-w-druzynie: 2     # 1 = tylko single, 2 = także debel (gracze drużyny odbijają na zmianę)
+  zasieg: 2.4                  # jak daleko od oczu (w blokach) dosięgasz rakietką
+  czas-na-serwis-sekundy: 15
+  # Mnożnik celności uderzeń (1 = normalnie, więcej = celniej, mniej = częściej autowe i w siatkę).
+  celnosc: 1.0
+  # Czy odbicie piłeczki, zanim odbije się od stołu (wolej), jest błędem (zasady prawdziwego ping-ponga: tak).
+  blad-woleja: true
+  # Grawitacja piłeczki (m/s²): mniej = wolniejsza, bardziej "pływająca" gra, łatwiejsza dla początkujących.
+  grawitacja: 7.0
+  material-podlogi: SMOOTH_STONE
+  material-obrzeza: LIGHT_GRAY_CONCRETE
+  material-linii: WHITE_CONCRETE
+  material-stolu: BLUE_CONCRETE
+  material-linii-stolu: WHITE_CONCRETE
