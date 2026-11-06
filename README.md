@@ -1,88 +1,84 @@
-# 🎰 Kasyno, ekonomia i sport na serwer Minecraft
+# Kasyno, ekonomia i sport na serwer Minecraft
 
-Zestaw trzech projektów, które razem tworzą ekonomię i rozrywkę na serwerze **Paper 1.21.11**: kasyno z 18 grami w GUI (w tym czterema stołami na żywo), prace i nagrody w prawdziwym świecie, napady i pojedynki z animacją w grze oraz siatkówka, koszykówka i ping-pong z fizyką piłki. Do tego bot Discord z tą samą ekonomią.
+To mój projekt na serwer Minecraft (Paper 1.21.11). Są w nim trzy rzeczy: plugin z kasynem i ekonomią, plugin ze sportem (siatkówka, koszykówka, ping-pong) i bot na Discorda z tą samą ekonomią.
 
-Wszystko jest napisane od zera (Java 21 i Node.js), ma **ponad 660 testów automatycznych w pluginach** (plus rozbudowane scenariusze bota) i opis konfiguracji po polsku. Poniżej nagrania z działającego serwera.
+Pluginy są w Javie 21, bot w Node.js. Plugin z kasynem ma 405 testów, ten ze sportem około 260. Niżej kilka nagrań z mojego serwera.
 
-## Jak to wygląda na serwerze
-
-Podglądy z nagrań z serwera (Minecraft 1.21.11, Paper). Każdą z tych funkcji da się włączyć, wyłączyć i ustawić w `config.yml`.
+## Jak to wygląda
 
 | | |
 |---|---|
-| ![Siatkówka](docs/media/siatkowka.gif)<br>**Siatkówka**: zagrywka, odbicia i atak z fizyką piłki, zasady i punktacja | ![Koszykówka](docs/media/koszykowka.gif)<br>**Koszykówka**: rzuty, faule, zabieranie piłki, wsady, zegar akcji |
-| ![Ping-pong](docs/media/pingpong.gif)<br>**Ping-pong**: stół z siatką, serwis i wymiana | ![Pojedynek na arenie](docs/media/pojedynek.gif)<br>**Pojedynek na arenie**: odliczanie, walka i rozliczenie stawki w grze |
-| ![Rekin](docs/media/rekin.gif)<br>**Rekin**: im dalej od brzegu, tym większe ryzyko; najpierw płetwa i czas na ucieczkę | ![Śmietniki](docs/media/smietniki.gif)<br>**Śmietniki w świecie**: modele z bloków, każdy z własną przerwą i łupem |
-| ![Paczki](docs/media/paczki.gif)<br>**Kurier**: dostarczanie paczek po mieście z celami w świecie | |
+| ![Siatkówka](docs/media/siatkowka.gif)<br>Siatkówka: zagrywka, odbicia, atak, punkty | ![Koszykówka](docs/media/koszykowka.gif)<br>Koszykówka: rzuty, faule, wsady, zegar akcji |
+| ![Ping-pong](docs/media/pingpong.gif)<br>Ping-pong: stół z siatką, serwis i wymiana | ![Pojedynek na arenie](docs/media/pojedynek.gif)<br>Pojedynek na arenie: odliczanie i walka o stawkę |
+| ![Rekin](docs/media/rekin.gif)<br>Rekin: im dalej od brzegu, tym większe ryzyko, najpierw widać płetwę | ![Śmietniki](docs/media/smietniki.gif)<br>Śmietniki z bloków, każdy ma własną przerwę |
+| ![Paczki](docs/media/paczki.gif)<br>Kurier: dostarczanie paczek po mieście | |
 
-Do tego okna kasyna z własnymi tłami i ikonami (moneta, sloty, ruletka, plinko, crash, kości, limbo, wieża i inne) oraz stoły na żywo (ruletka, crash, koło, wyścigi koni).
+Poza tym są okna gier z własnymi tłami i ikonami (moneta, sloty, ruletka, plinko, crash i inne) oraz stoły na żywo.
 
-## Co jest w repozytorium
+## Co jest w repo
 
-| Folder | Co to jest | Opis |
-|---|---|---|
-| [`minecraft-plugin/`](minecraft-plugin/README.md) | **Kasyno i Ekonomia**: plugin Paper (Java 21, ok. 23 tys. linii + 10 tys. testów) | gry, sklep, bank, biznesy, prace, napady, arena, więzienie, rekin, waypointy |
-| [`sport-plugin/`](sport-plugin/README.md) | **SportPlugin**: siatkówka, koszykówka, ping-pong (Java 21, ok. 8 tys. linii + 5 tys. testów) | fizyka piłki, zasady, boiska budowane komendą |
-| [`src/`](docs/discord-bot.md), [`test/`](test) | **Bot Discord** (Node.js, ok. 13 tys. linii razem z testami) | ta sama ekonomia na komendach `/` i `!`, wersja przeglądarkowa |
-| [`docs/`](docs) | dokumentacja | [architektura](docs/ARCHITEKTURA.md), [opis bota](docs/discord-bot.md), nagrania |
+| Folder | Co to jest |
+|---|---|
+| [`minecraft-plugin/`](minecraft-plugin/README.md) | Kasyno i ekonomia, plugin Paper (ok. 23 tys. linii Javy i 10 tys. linii testów) |
+| [`sport-plugin/`](sport-plugin/README.md) | siatkówka, koszykówka i ping-pong (ok. 8 tys. linii i 5 tys. linii testów) |
+| `src/` i `test/` | bot Discord, opis w [`docs/discord-bot.md`](docs/discord-bot.md) |
+| [`docs/`](docs) | dokumentacja, m.in. [architektura](docs/ARCHITEKTURA.md) |
 
-## Najważniejsze funkcje
+## Co to potrafi
 
-**Ekonomia i kasyno** (plugin i bot): portfel, bank z odsetkami, 113 przedmiotów w sklepie, poziomy, biznesy z dochodem pasywnym, farma, skrzynie z animacją jak w CS:GO, loteria. W pluginie 14 gier solo (moneta, sloty, zdrapka, kości, blackjack, hi-lo, miny, Chicken Road, wieża, plinko, limbo, rewolwer, szansa, kamień-papier-nożyce) i cztery **stoły na żywo**, przy których jedna runda obsługuje wielu graczy naraz (crash, ruletka, koło, wyścigi). Do tego jackpot, napad, pojedynki i loteria dla wielu graczy.
+Kasyno i ekonomia: portfel, bank z odsetkami, sklep ze 113 przedmiotami, poziomy, biznesy z dochodem pasywnym, farma, skrzynie i loteria. Gier jest 14 solo w oknach (moneta, sloty, zdrapka, kości, blackjack, hi-lo, miny, Chicken Road, wieża, plinko, limbo, rewolwer, szansa i kamień-papier-nożyce) i cztery stoły na żywo, przy których jedna runda jest wspólna dla wszystkich (crash, ruletka, koło, wyścigi). Do tego jackpot, napad i pojedynki.
 
-**Rozgrywka w prawdziwym świecie** (plugin):
+W samym świecie gry:
 
-* **Napad na bank**: ekipa wchodzi do zbudowanego banku w stylu klasycystycznym w skórkach prawdziwych graczy, scenariusz losują etapy, złapani idą do więzienia.
-* **Arena**: pojedynki 50/50 i jackpot rozgrywane jako pokaz z figurami graczy, odliczaniem i fajerwerkami zwycięzcy.
-* **Prace w terenie**: NPC zlecają zadania (zbieranie grzybów, kopalnia, ryby, sprzątanie, paczki), a cele świecą w świecie.
-* **Śmietniki**: modele z bloków, z których się zbiera łup, każdy ma własną przerwę.
-* **Waypointy**: napis z nazwą i odległością o stałym rozmiarze, widoczny przez ściany. Prowadzenie do wybranego miejsca, nagrody za odkrycie, własny dom i znacznik miejsca śmierci.
-* **Więzienie**: nieudane przestępstwo lub napad kończy się celą (losową z trzech), z której wychodzi się, zaliczając minigierki (podkop, refleks, sekwencja, egzamin).
-* **Rekin**: szansa ataku rośnie z odległością od lądu; płetwa krąży wokół pływaka, potem animowany rzut, połowa gotówki z portfela przepada.
+* napad na bank: ekipa wchodzi do banku w skórkach prawdziwych graczy, etapy losuje scenariusz, a złapani idą do więzienia
+* arena: pojedynki i jackpot jako pokaz z figurami graczy, odliczaniem i fajerwerkami dla zwycięzcy
+* prace od NPC: grzyby, kopalnia, ryby, sprzątanie, paczki, a cele świecą w świecie
+* śmietniki, z których zbiera się łup
+* waypointy z nazwą i odległością, które widać przez ściany. Można dać nagrodę za odkrycie miejsca, ustawić dom i dostać znacznik miejsca śmierci
+* więzienie: po nieudanym przestępstwie albo napadzie trafia się do jednej z trzech cel i wychodzi się przez minigierki (podkop, refleks, sekwencja, egzamin)
+* rekin: im dalej od brzegu pływasz, tym większa szansa, że podpłynie. Najpierw masz kilka sekund na wyjście z wody, potem rekin gryzie i tracisz połowę gotówki z portfela
 
-**Sport** (osobny plugin): siatkówka (zagrywka, bagger, wystawienie, atak, blok), koszykówka (rzuty, faule, rzuty osobiste, wsad, zabieranie piłki), ping-pong. Piłki lecą według prawdziwej fizyki (opór powietrza, odbicia), a gracze sterują myszą.
+Sport to osobny plugin: siatkówka (zagrywka, odbicie, wystawienie, atak, blok), koszykówka (rzuty, faule, rzuty osobiste, wsad, zabieranie piłki) i ping-pong. Piłka leci według fizyki, z oporem powietrza i odbiciami, a graczem steruje się myszą.
 
-## Dla administratora: jak to jest zrobione
+## Jak to jest zrobione
 
-Krótko, bo szczegóły są w [dokumencie o architekturze](docs/ARCHITEKTURA.md):
+Więcej jest w [docs/ARCHITEKTURA.md](docs/ARCHITEKTURA.md), a tutaj najważniejsze rzeczy:
 
-* **Logika oddzielona od Bukkita.** Zasady gier, fizyka, scenariusze (napad, atak rekina, wyrok więzienia) to czysty Java bez serwera, z wymiennymi „backendami” (stawianie encji, wykrywanie wody, teren). Dzięki temu da się je testować bez uruchamiania Minecrafta.
-* **Testy na atrapie serwera.** Plugin Kasyno: **405 testów**, SportPlugin: **ok. 260**, bot: scenariusze z kilkoma tysiącami wywołań komend. Pieniądze w testach muszą się zgadzać co do monety, a każda gra ma sprawdzony zwrot poniżej 100%.
-* **Bezpieczeństwo ekonomii.** Stawka jest pobierana i rozliczana zanim ruszy animacja. Po awarii serwera stawki z przerwanych gier i stołów wracają do graczy. Kliknięcia w GUI są zawsze anulowane, a ich tempo ograniczone.
-* **Konfiguracja bez bólu.** Wszystko w `config.yml` z komentarzami, stare pliki konfiguracji i zapisy graczy wczytują się po aktualizacji (nowe pola mają wartości domyślne). Uprawnienia: `kasyno.use`, `kasyno.admin` oraz osobne wyjątki dla więzienia i rekinów.
-* **Czystość.** Brak sekretów w repozytorium (token bota tylko w lokalnym `.env`), dane graczy poza gitem, każdy plugin buduje się jedną komendą (`mvn package`).
-* **Własna paczka zasobów** generowana skryptami Node.js: tła okien, ikony, karty 3D, piłki.
+* logika gier, fizyka i scenariusze (napad, atak rekina, wyrok) są oddzielone od Bukkita, więc da się je testować bez uruchamiania Minecrafta
+* testy idą na atrapie serwera (MockBukkit). Pieniądze muszą się w nich zgadzać co do monety, a każda gra ma sprawdzony zwrot poniżej 100%
+* stawka jest pobierana i rozliczana, zanim ruszy animacja. Po awarii serwera stawki z przerwanych gier wracają do graczy
+* ustawienia są w `config.yml` z komentarzami. Po aktualizacji stare configi i zapisy graczy dalej działają
+* w repo nie ma żadnych sekretów, token bota jest tylko w lokalnym `.env`
+* paczkę zasobów (tła okien, ikony, karty 3D) generują skrypty w Node.js
 
-## Szybki start
+## Uruchomienie
 
-**Plugin Minecraft** (Paper 1.21.11, Java 21): pobierz plik `.jar` z zakładki **Releases** i wgraj do `plugins/`, albo zbuduj sam:
+Plugin: gotowy plik `.jar` jest w zakładce Releases. Wrzuca się go do `plugins/` (Paper 1.21.11, Java 21). Można też zbudować samemu:
 
 ```bash
 cd minecraft-plugin
-mvn package        # testy + target/KasynoEkonomia-1.0.0.jar
+mvn package
 ```
 
-Szczegóły instalacji, komend i konfiguracji: [`minecraft-plugin/README.md`](minecraft-plugin/README.md) oraz [`sport-plugin/README.md`](sport-plugin/README.md) (uwaga: SportPlugin zastępuje starszy `SiatkowkaPlugin`, więc nie wgrywaj ich razem).
+Szczegóły i komendy są w [`minecraft-plugin/README.md`](minecraft-plugin/README.md) i [`sport-plugin/README.md`](sport-plugin/README.md). Plugin ze sportem zastępuje starszy `SiatkowkaPlugin`, więc nie wrzucaj ich razem.
 
-**Bot Discord** (Node.js 22.13 lub nowszy):
+Bot Discord (Node.js 22.13 lub nowszy):
 
 ```bash
 npm install
-npm run setup      # kreator zapisze lokalny plik .env (token nie trafia do repozytorium)
-npm run deploy     # rejestruje komendy slash
+npm run setup
+npm run deploy
 npm start
 ```
 
-Pełny opis: [`docs/discord-bot.md`](docs/discord-bot.md).
+`npm run setup` zapyta o token i zapisze go w lokalnym `.env`, który nie trafia do gita. Więcej w [`docs/discord-bot.md`](docs/discord-bot.md).
 
-## Uczciwie o stanie projektu
+## Co jest sprawdzone, a co nie
 
-* Nagrania powyżej pochodzą z **działającego serwera Paper 1.21.11**: widać na nich sport, arenę, śmietniki, kuriera, rekina i okna gier.
-* Część funkcji (m.in. napad na bank w świecie, więzienie, waypointy z nagrodami) ma na razie **tylko testy automatyczne** na atrapie serwera (MockBukkit) i nie była jeszcze oglądana na żywo.
-* Projekt nie był jeszcze sprawdzany przy dużym obciążeniu (dziesiątki graczy naraz).
+Nagrania są z działającego serwera: sport, arena, śmietniki, kurier, rekin i okna gier. Napad na bank w świecie, więzienie i waypointy z nagrodami mają na razie tylko testy na atrapie serwera, na żywo jeszcze ich nie widziałem. Nie sprawdzałem też, jak to działa przy dużej liczbie graczy naraz.
 
-## Jak powstał
+## Kto to pisał
 
-Projekt rozwijam iteracyjnie z asystentem AI (Claude Code): zlecam funkcje, oglądam je na prawdziwym serwerze, a poprawki wynikają z tego, co tam zobaczę. Kod i testy powstają w tej współpracy, a decyzje o tym, co ma działać i jak ma wyglądać, są moje.
+Kod w większości pisze Claude Code (asystent AI). Ja mówię, co ma działać, sprawdzam to na serwerze i zgłaszam poprawki.
 
-Autor: **fr0zenowy**
+Autor: fr0zenowy

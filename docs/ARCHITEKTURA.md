@@ -1,64 +1,64 @@
 # Architektura
 
-Dokument dla osoby, która ma zrozumieć, jak to jest zbudowane i jak to utrzymywać. Skupia się na plugin Kasyno (największy) i zaznacza różnice w SportPlugin i bocie.
+Krótko o tym, jak jest poukładany plugin Kasyno (największy z trzech) i czym różnią się SportPlugin i bot.
 
-## Mapa pakietów (plugin Kasyno, `pl.kasyno`)
+## Pakiety (`pl.kasyno`)
 
-| Pakiet | Za co odpowiada |
+| Pakiet | Co w nim jest |
 |---|---|
-| `core` | ekonomia bez Bukkita: portfel, bank, cooldowny, szansa i losowanie (`Eco`), zarobki (`Earn`), napad jako czysty scenariusz (`Heist`), zapis graczy (`DataStore`, JSON przez Gson), katalog przedmiotów (`catalog.json`) |
-| `gui` | okna: bazowa klasa `Gui` (zawsze 6 rzędów, kliknięcia zawsze anulowane), `Screens` (wejście po nazwie), budowanie ikon, dźwięki i efekty |
+| `core` | ekonomia bez Bukkita: portfel, bank, cooldowny, losowanie (`Eco`), zarobki (`Earn`), napad jako sam scenariusz (`Heist`), zapis graczy (`DataStore`), katalog przedmiotów |
+| `gui` | okna. Bazowa klasa `Gui` ma zawsze 6 rzędów i anuluje wszystkie kliknięcia, `Screens` otwiera okno po nazwie |
 | `games` | rejestr gier, lobby napadu i jackpota (`Rooms`), sceny |
 | `table` | stoły na żywo: jedna runda, wielu graczy, wspólne rozliczenie |
-| `show` | pokazy w świecie: bank (napad), arena (pojedynek, jackpot), figury graczy ze skórkami |
-| `work`, `bin` | prace w terenie z celami w świecie, śmietniki |
-| `waypoint` | waypointy: napisy o stałym rozmiarze, miejsca kasyna, prowadzenie, nagrody, punkty osobiste |
-| `prison`, `shark` | więzienie z minigierkami, rekin z modelem i animacją |
-| `npc`, `pack` | NPC i placeholdery otwierające okna, paczka zasobów z wbudowanym serwerem HTTP |
-| `cmd` | komendy (`/kasyno ...` i krótkie po polsku) |
+| `show` | pokazy w świecie: bank do napadu, arena, figury graczy ze skórkami |
+| `work`, `bin` | prace w terenie z celami w świecie i śmietniki |
+| `waypoint` | waypointy: napisy o stałym rozmiarze, miejsca kasyna, prowadzenie do celu, nagrody, dom i miejsce śmierci |
+| `prison`, `shark` | więzienie z minigierkami i rekin z modelem i animacją |
+| `npc`, `pack` | NPC otwierający okna, paczka zasobów z małym serwerem HTTP |
+| `cmd` | komendy (`/kasyno ...` i krótkie, np. `/saldo`) |
 
 ## Zasady, które się powtarzają
 
-**1. Logika bez Bukkita, Bukkit przez cienkie interfejsy.** Każda większa funkcja ma część „mózg” (czysty Java) i część „ręce” (encje, bloki, wiadomości), połączone małym interfejsem:
+**Logika osobno, Bukkit osobno.** Każda większa funkcja ma część z samą logiką (zwykła Java, bez serwera) i cienką część, która robi rzeczy w świecie. Łączy je mały interfejs, który w testach można podmienić.
 
-| Funkcja | Mózg (testowany bez serwera) | Ręce (podmieniane w testach) |
+| Funkcja | Sama logika | Część w świecie |
 |---|---|---|
 | Rekin | `SharkRules`, `SharkModel`, `SharkChoreo` | `SharkBackend`, `WaterProbe` |
 | Prace w terenie | `JobPlanner`, `Compass` | `NodeBackend`, `Terrain` |
 | Waypointy | `WaypointView`, `ViewAnchor` | `MarkerBackend` |
-| Więzienie | `PrisonRules`, `MashRound`, `ReflexRound`, `SimonRound` | `PrisonService` (Bukkit) |
+| Więzienie | `PrisonRules`, `MashRound`, `ReflexRound`, `SimonRound` | `PrisonService` |
 | Napad | `Heist`, `HeistFrames` | `ShowService` |
 
-Testy jednostkowe liczą np. cały scenariusz ataku rekina tick po ticku (kto, gdzie, kiedy gryzie), a testy integracyjne na atrapie serwera (MockBukkit) sprawdzają klejenie z Bukkitem.
+Dzięki temu np. cały atak rekina da się przeliczyć tick po ticku w teście jednostkowym, a testy na MockBukkit sprawdzają tylko, czy wszystko dobrze współpracuje z serwerem.
 
-**2. Czas jest wstrzykiwany.** Plugin nie czeka „na prawdziwy zegar” w logice: cooldowny i wyroki liczą się od zegara `Eco`, a animacje od ticków serwera. Dzięki temu testy przewijają minuty w milisekundy i są powtarzalne.
+**Czas jest podawany z zewnątrz.** Cooldowny i wyroki liczą się od zegara w `Eco`, a animacje od ticków serwera. W testach można więc przewinąć minuty w ułamku sekundy i wynik zawsze jest taki sam.
 
-**3. Pieniądze zawsze się zgadzają.** Gra pobiera stawkę, rozlicza wynik i dopiero pokazuje animację (animacja tylko odgrywa wynik). Stawka w toku jest zapisana w danych gracza, więc po awarii serwera wraca do portfela. Testy sprawdzają sumy portfeli co do monety, także przy napadach z różną wielkością ekipy, a symulacje sprawdzają, że każda gra ma zwrot poniżej 100%.
+**Pieniądze mają się zgadzać.** Gra najpierw pobiera stawkę i rozlicza wynik, a dopiero potem pokazuje animację, która tylko odgrywa to, co już się stało. Stawka w trakcie gry jest zapisana w danych gracza, więc po awarii serwera wraca do portfela. Testy sprawdzają sumy portfeli co do monety, a symulacje pilnują, żeby każda gra miała zwrot poniżej 100%.
 
-**4. Dane graczy da się rozbudowywać.** Gracz to jeden obiekt `PlayerData` zapisywany do JSON. Dodanie pola nie psuje starych zapisów (brakujące pola dostają wartość domyślną), a zapis idzie w tle: serializacja w wątku głównym, plik w osobnym wątku, co 30 sekund.
+**Dane graczy.** Gracz to jeden obiekt `PlayerData` zapisywany jako JSON. Nowe pole nie psuje starych zapisów, bo brakujące pola dostają wartość domyślną. Zapis idzie w tle co 30 sekund (obiekt jest serializowany w głównym wątku, a plik zapisuje osobny).
 
-**5. Konfiguracja ma wartości domyślne w kodzie i w pliku.** Nowy klucz w `config.yml` działa od razu także na starej konfiguracji serwera, bo kod czyta go z wartością domyślną.
+**Konfiguracja.** Każdy klucz z `config.yml` jest czytany z wartością domyślną w kodzie, więc nowy klucz działa też na starym pliku konfiguracji.
 
-**6. Encje w świecie są tymczasowe i oznaczone.** Napisy waypointów, śmietniki, model rekina i pokazy to encje `Display` z znacznikiem w danych (PDC). Znikają przy restarcie, nie zapisują się w świecie, a po awarii plugin sprząta zabłąkane przy starcie. Napisy waypointów są widoczne tylko dla właściciela (każdy gracz ma własne), więc odległość w napisie jest zawsze jego.
+**Encje w świecie są tymczasowe.** Napisy waypointów, śmietniki, model rekina i pokazy to encje `Display` z oznaczeniem w danych encji. Nie zapisują się w świecie, a po awarii plugin sprząta zabłąkane przy starcie. Napisy waypointów widzi tylko ich właściciel, każdy gracz ma własne, więc odległość na napisie jest zawsze jego.
 
-**7. Wszystko, co robi administrator, jest za uprawnieniem.** `kasyno.admin` dla komend zarządzających, osobne wyjątki `kasyno.prison.bypass` i `kasyno.shark.bypass`. Funkcje da się wyłączyć w `config.yml` bez usuwania danych.
+**Uprawnienia.** Komendy administratora są za `kasyno.admin`, a więzienie i rekiny mają osobne wyjątki (`kasyno.prison.bypass`, `kasyno.shark.bypass`). Każdą funkcję można wyłączyć w `config.yml`, dane zostają.
 
-## Jak coś dodać
+## Jak dodać coś nowego
 
-* **Nowa gra solo:** klasa okna w `games/instant` albo `games/held`, wpis w `GameRegistry`, ikona i tło w paczce zasobów (`tools/pack`). Test w `GuiFlowTest` zagra ją i sprawdzi rozliczenie.
-* **Nowa funkcja w świecie:** najpierw czysta logika z testami, potem cienki backend, na końcu komenda administratora i sekcja w `config.yml`. Wzór: pakiet `shark`.
-* **Nowa komenda krótka:** wpis w `cmd/Commands`, a podkomenda `/kasyno ...` w `RootCommand`.
+* nowa gra solo: klasa okna w `games/instant` albo `games/held`, wpis w `GameRegistry` i ikona z tłem w paczce zasobów (`tools/pack`). Test w `GuiFlowTest` zagra ją i sprawdzi rozliczenie
+* nowa funkcja w świecie: najpierw sama logika z testami, potem cienka część do świata, na końcu komenda i sekcja w `config.yml`. Wzorem jest pakiet `shark`
+* nowa komenda: krótka w `cmd/Commands`, podkomenda `/kasyno ...` w `RootCommand`
 
 ## SportPlugin
 
-Ta sama zasada: `pl.sport.core` to czysta fizyka (opór powietrza, odbicia, rozwiązywanie rzutów balistycznych), `volley.VolleyGame` i `basket.BasketGame` to silniki zasad bez Bukkita, a `match.*`, `arena.*` i `listener` kleją je z serwerem. Mecz biegnie na własnym zegarze 50 ms. Testy obejmują całe mecze rozgrywane przez boty.
+Ta sama zasada. `pl.sport.core` to sama fizyka (opór powietrza, odbicia, wyliczanie rzutów), a `volley.VolleyGame` i `basket.BasketGame` to silniki zasad bez Bukkita. `match.*`, `arena.*` i `listener` łączą je z serwerem. Mecz biegnie na własnym zegarze co 50 ms, a testy rozgrywają całe mecze z botami.
 
 ## Bot Discord
 
-Moduły w `src/commands` (jedna komenda na plik), wspólne reguły w `src/lib` (ekonomia, katalog, gry), SQLite jako magazyn, wersja przeglądarkowa w `src/web`. `npm test` odpala scenariusze, które wywołują tysiące komend i sprawdzają rozliczenia co do monety (`test/smoke.js`), osobny test zwrotów (`test/rtp.js`) i testy strony (`test/web.js`).
+Każda komenda ma swój plik w `src/commands`, wspólne reguły (ekonomia, katalog, gry) są w `src/lib`, dane trzyma SQLite, a wersja przeglądarkowa jest w `src/web`. `npm test` wywołuje tysiące komend i sprawdza rozliczenia co do monety (`test/smoke.js`). Zwroty gier sprawdza `test/rtp.js`, a stronę `test/web.js`.
 
-## Znane ograniczenia
+## Czego jeszcze nie sprawdziłem
 
-* Brak testów obciążeniowych na dużej liczbie graczy.
-* Część funkcji w świecie (napad, więzienie, waypointy z nagrodami) była sprawdzona tylko na atrapie serwera.
-* Paczka zasobów musi być wgrana po stronie klienta, żeby okna miały własny wygląd (bez niej okna wyglądają zwyczajnie, ale działają).
+* zachowania przy dużej liczbie graczy naraz
+* na żywo napadu na bank w świecie, więzienia i waypointów z nagrodami (mają tylko testy na atrapie serwera)
+* okna mają własny wygląd tylko u graczy z wgraną paczką zasobów, bez niej wyglądają zwyczajnie, ale działają
